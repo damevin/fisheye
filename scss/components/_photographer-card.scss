@@ -1,0 +1,33 @@
+.photographer {
+    margin-top: 2rem;
+    text-align: center;
+    &__img {
+        border-radius: 50%;
+        height: 200px;
+        object-fit: cover;
+        width: 200px;
+    }
+    &__name {
+        font-size: 36px;
+        font-weight: 400;
+        line-height: 46.87px;
+        margin: 10px 0px 0px 0px;
+    }
+    &__localization {
+        font-size: 13px;
+        line-height: 16.93px;
+        margin:0;
+    }
+    &__tagline {
+        font-size: 10px;
+        line-height: 13.02px;
+        margin: 5px 0px;
+    }
+    &__price {
+        font-size: 11.72px;
+        margin: 0px 0px 10px 0px;
+    }
+    &__profile {
+        text-decoration: none;
+    }
+}

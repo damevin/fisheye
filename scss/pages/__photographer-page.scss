@@ -1,0 +1,10 @@
+.photographer {
+    &__header {
+        &__logo {
+            position: absolute;
+            left: 20px;
+            top: 40px;
+            width: 150px;
+        }
+    }
+}
