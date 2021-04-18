@@ -8,7 +8,7 @@ const displayData = async () => {
   const element = document.querySelector('.photographer');  
 
   photographers.forEach( photographer => element.innerHTML += `
-  <div>
+  <div class="photographer">
   <img class="photographer__img" src="./assets/photographers/${photographer.portrait}">
   <h2 class="photographer__name">${photographer.name}</h2>
   <p class="photographer__localization">${photographer.city}, ${photographer.country}</p>
