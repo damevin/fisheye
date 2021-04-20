@@ -18,12 +18,14 @@ const displayData = async () => {
       <ul class="photographer__tags">
       </ul>
       </div>`;
-    for (var i = 0; i < tags.length; i++) {
+    for (let i = 0; i < tags.length; i++) {
+
       const tagList = document.querySelector(".photographer__tags");
       const li = document.createElement('li');
-      li.textContent = photographer.tags[i]
+      li.textContent += tags[i]
       tagList.appendChild(li);
   }
+  
 })}
 
 displayData()
