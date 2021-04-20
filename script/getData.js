@@ -5,7 +5,10 @@ const getData = async () => await fetch("../data/photographers.json", {mode: 'no
 
 const displayData = async () => {
   const { media, photographers } = await getData();
-  const element = document.querySelector('.photographer');  
+  const element = document.querySelector('.photographer');
+ /*  const tagsList = document.querySelector('.photographer__tags');
+  const node = document.createElement("LI");
+  node.appendChild(tagsList); */
 
   photographers.forEach( photographer => element.innerHTML += `
   <div class="photographer">
@@ -13,10 +16,19 @@ const displayData = async () => {
   <h2 class="photographer__name">${photographer.name}</h2>
   <p class="photographer__localization">${photographer.city}, ${photographer.country}</p>
   <p class="photographer__tagline">${photographer.tagline}</p>
-  <ul>
-  <li>${photographer.tags}</li>
+  <ul class="photographer__tags">
   </ul>
   </div>`
-  )}
+  )
+  
+  photographers.forEach( tags => createTags())
+}
 
 displayData()
+
+function createTags(){
+  const tagList = document.querySelector(".photographer__tags");
+  const li = document.createElement('li');
+  li.textContent = photographers.tags;
+  tagList.appendChild(li);
+}
