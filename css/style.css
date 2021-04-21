@@ -74,6 +74,10 @@ body {
   text-decoration: none;
 }
 
+.photographer__tag {
+  color: red;
+}
+
 ul {
   list-style-type: none;
   margin: 0;

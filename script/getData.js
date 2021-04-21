@@ -21,13 +21,13 @@ const displayData = async () => {
     element.appendChild(tagList);
     tagList.classList.add('photographer__tags');
 
-   tags.forEach( tag => {
-      const li = document.createElement('li');
-      li.classList.add("photographer__tag")
-      li.textContent += tag
-      tagList.appendChild(li);
+    tags.forEach( tag => {
+        const li = document.createElement('li');
+        li.classList.add("photographer__tag")
+        li.textContent += tag
+        tagList.appendChild(li);
+    })
   })
-  
-})}
+}
 
 displayData()
