@@ -5,16 +5,29 @@ const getData = async () => await fetch("../data/photographers.json", {mode: 'no
 
 const displayData = async () => {
   const { media, photographers } = await getData();
-
   const element = document.querySelector('.photographer');
+ 
 
-  // Méthode à la papa
-  for (const photographer of photographers) {
-    element.innerHTML += `${photographer.name} ${photographer.id} ${photographer.city}`
-  }
+  photographers.forEach( photographer => {
+    const tags = photographer.tags
+    element.innerHTML += `
+      <div class="photographer">
+      <img class="photographer__img" src="./assets/photographers/${photographer.portrait}">
+      <h2 class="photographer__name">${photographer.name}</h2>
+      <p class="photographer__localization">${photographer.city}, ${photographer.country}</p>
+      <p class="photographer__tagline">${photographer.tagline}</p>
+      </div>`;
+    const tagList = document.createElement("ul");
+    element.appendChild(tagList);
+    tagList.classList.add('photographer__tags');
 
-  // Méthode de jeuns
-  // photographers.forEach(photographer => element.innerHTML += `${photographer.name} ${photographer.id} ${photographer.city}`)
+    tags.forEach( tag => {
+        const li = document.createElement('li');
+        li.classList.add("photographer__tag")
+        li.textContent += tag
+        tagList.appendChild(li);
+    })
+  })
 }
 
 displayData()
