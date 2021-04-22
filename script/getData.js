@@ -23,7 +23,6 @@ const displayData = async () => {
     const tagList = document.createElement("ul");
     element.appendChild(tagList);
     tagList.classList.add('photographer__tags');
-
     tags.forEach( tag => {
         const li = document.createElement('li');
         li.classList.add("photographer__tag")
@@ -32,5 +31,7 @@ const displayData = async () => {
     })
   })
 }
+
+
 
 displayData()
