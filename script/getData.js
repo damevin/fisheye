@@ -32,6 +32,5 @@ const displayData = async () => {
   })
 }
 
-
-
 displayData()
+
