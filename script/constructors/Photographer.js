@@ -14,10 +14,10 @@ class Photographer {
     }
 
     get profileDescription() {
-        return `<p>
+        /* return `<p>
             ${this._name}
             <br />
             ${this._tagline}
-        </p>`
+        </p>` */
     }
 }
