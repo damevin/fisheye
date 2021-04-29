@@ -11,8 +11,10 @@ async function displayPhotographerData() {
             <p >${photographer.tags.map(tag => `<a href="../index.html">#${tag}</a>`).join(" ")}</p>
         </div>
         `
-    console.log(photographer[0])
- 
+    console.log(media)
+    const galery = media.find(media => media.id == id)
+
+   
 }
 
 displayPhotographerData()
