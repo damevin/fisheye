@@ -1,10 +1,18 @@
-.photographer {
-    &__header {
-        &__logo {
-            position: absolute;
-            left: 20px;
-            top: 40px;
-            width: 150px;
+.photographer-page {
+    &__logo {
+        position: absolute;
+        left: 20px;
+        top: 40px;
+        width: 150px;
+    }
+
+    &__header { 
+        &__photo {
+            height: 200px;
+            width: 200px;
+            border-radius: 50%;
+            object-fit: cover;
         }
+        
     }
 }
