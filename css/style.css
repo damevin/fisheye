@@ -89,9 +89,16 @@ a  {
   color: inherit;
 }
 
-.photographer__header__logo {
+.photographer-page__logo {
   position: absolute;
   left: 20px;
   top: 40px;
   width: 150px;
+}
+
+.photographer-page__header__photo {
+  height: 200px;
+  width: 200px;
+  border-radius: 50%;
+  object-fit: cover;
 }
