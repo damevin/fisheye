@@ -6,6 +6,7 @@ const getData = async () => await fetch("../data/photographers.json", {mode: 'no
 const displayData = async () => {
   const { media, photographers } = await getData();
   const element = document.querySelector('.photographer');
+  console.log(media)
   
   photographers.forEach( item => {
     let photographer = new Photographer(item);
