@@ -46,4 +46,16 @@ class Photographer {
 
     }
 
+    get userHeader() {
+       return  `
+        <div class="photographer-page__header__content>
+            <h1 role="header">${this._name}</h1>
+            <p>${this.localization}</p>
+            <p >${this._tags.map(tag => `<a href="../index.html">#${tag}</a>`).join(" ")}</p>
+        </div>
+            <img src="${this.picture}" class="photographer-page__header__photo">
+            
+        `
+    }
+
 }
