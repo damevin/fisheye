@@ -1,11 +1,17 @@
-// Get the modal
-const modal = document.getElementById("myModal");
-
-// Get the button that opens the modal
-const btn = document.getElementById("myBtn");
-
-// Get the <span> element that closes the modal
+const modal = document.getElementById("contact__modal");
+const btn = document.getElementById("photographer-page__contact__button");
 const span = document.getElementsByClassName("close")[0];
+
+//Submit button
+const submitButton = document.getElementById('form-submit-button')
+
+// DOM ELEMENTS 
+const firstNameInput = document.getElementById('firstname')
+const lastNameInput = document.getElementById('lastname')
+const emailInput = document.getElementById('email')
+const messageInput = document.getElementById('message')
+
+console.log(emailInput)
 
 // When the user clicks the button, open the modal 
 btn.onclick = function() {
@@ -23,3 +29,14 @@ window.onclick = function(event) {
     modal.style.display = "none";
   }
 }
+
+console.log(submitButton)
+if (submitButton) {
+ submitButton.addEventListener("click", function(event) {
+  event.preventDefault()
+  console.log(`L'utilisateur ${firstNameInput.value} ${lastNameInput.value} avec l'adresse mail suivante ${emailInput.value} vous adresse le message suivant : ${messageInput.value}`)
+  modal.style.display = "none";
+ })
+
+}
+
