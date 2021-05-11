@@ -80,7 +80,7 @@ body {
 
 .lightbox {
   animation: lightboxIn .5s;
-  background-color: rgba(0,0,0, .90);
+  background-color: rgba(255, 253, 253, 0.9);
   height: 100%;
   left: 0;
   position: fixed;
