@@ -41,14 +41,14 @@ class Photographer {
                 </a>
                 <p class="photographer__localization">${this.localization}</p>
                 <p class="photographer__tagline">${this._tagline}</p>
-                <ul>${this._tags.map(tag => `<li class="tag">#${tag}</li>`).join('')}</ul>
+                <ul>${this._tags.map(tag => `<li>#${tag}</li>`).join('')}</ul>
             </div>`
 
     }
 
     /**
      * Create photographer header on his page
-     * @returnns {string}
+     * @returns {string}
      */
     get userHeader() {
        return  `
