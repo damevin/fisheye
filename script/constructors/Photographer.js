@@ -46,6 +46,10 @@ class Photographer {
 
     }
 
+    /**
+     * Create photographer header on his page
+     * @returnns {string}
+     */
     get userHeader() {
        return  `
         <div class="photographer-page__header__content>
