@@ -89,6 +89,12 @@ a  {
   color: inherit;
 }
 
+.photographer-page {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
 .photographer-page__logo {
   position: absolute;
   left: 20px;
@@ -96,9 +102,27 @@ a  {
   width: 150px;
 }
 
+.photographer-page__header {
+  display: flex;
+  justify-content: space-between;
+  height: 200px;
+}
+
 .photographer-page__header__photo {
   height: 200px;
   width: 200px;
   border-radius: 50%;
   object-fit: cover;
+}
+
+.photographer-page__gallery {
+  display: grid;
+  grid-template-columns: 1fr;
+  gap: 1rem;
+}
+
+.photographer-page__gallery__photography {
+  height: 190px;
+  object-fit: cover;
+  width: 335px;
 }
