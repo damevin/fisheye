@@ -82,7 +82,7 @@ class Lightbox {
  */
  next(e){
   e.preventDefault()
-  let i = this.gallery.findIndex(image => image === this.src)
+  let i = this.gallery.findIndex(image => image === this.url)
   if (i === this.gallery.length - 1) {
    i = -1
   }
@@ -95,7 +95,7 @@ class Lightbox {
  */
  previous(e) {
   e.preventDefault()
-  let i = this.gallery.findIndex(image => image === this.src)
+  let i = this.gallery.findIndex(image => image === this.url)
   if (i === 0) {
    i = this.gallery.length
   }
