@@ -10,7 +10,6 @@ async function displayPhotographerData() {
     galery.forEach(image => {
         console.log(image)
         $elementGalery.innerHTML += `<img class="photographer-page__gallery__photography" src='../assets/medias/${photographer.name}/${image.image}'>`
-        
     }); 
 }
 
