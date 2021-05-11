@@ -1,3 +1,6 @@
+/**
+ * @property {HTMLElement} element
+ */
 class Lightbox {
  static init () {
   const links = document.querySelectorAll('img[src$=".jpg"]')
@@ -13,8 +16,26 @@ class Lightbox {
   * @param {*string} url Media URL
   */
  constructor (url) {
-  const element = this.buildDOM(url)
-  document.body.appendChild(element)
+  this.element = this.buildDOM(url)
+  this.loadMedia(url)
+  document.body.appendChild(this.element)
+ }
+
+ /**
+  * @param {*string} url Media URL
+  */
+ loadMedia(url){
+  const image = new Image()
+  const container = this.element.querySelector('.lightbox__container')
+  const loader = document.createElement("div")
+  loader.classList.add('lightbox__loader')
+  container.appendChild(loader)
+  image.onload = () => {
+   container.removeChild(loader)
+   container.appendChild(image)
+  }
+  image.src = url
+
  }
 
  /**
@@ -30,7 +51,6 @@ class Lightbox {
   <button class="lightbox__next">Suivant</button>
   <button class="lightbox__previous">Précédent</button>
   <div class="lightbox__container">
-      <img src="${url}" alt="">
   </div>`
   return dom
  }
