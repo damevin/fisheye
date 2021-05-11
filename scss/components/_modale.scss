@@ -94,3 +94,37 @@
  text-decoration: none;
  cursor: pointer;
 }
+
+// Large devices (desktops, 992px and up)
+@media (min-width: 992px) { 
+ .modal {
+  padding: 1rem 2rem;
+ }
+
+
+ .modal-content {
+  padding: 1rem 2rem;;
+  margin: auto;
+ }
+
+ .modal-header-title {
+  font-size: 64px
+ }
+
+ .form-label {
+  font-size: 36px;
+  font-weight: 400;
+ }
+
+ .form-submit {
+  justify-content: flex-start;
+  padding-bottom: 3rem; 
+ }
+
+ .form-submit-button {
+  height: 69px;
+  width: 170px;
+ }
+
+
+ }
