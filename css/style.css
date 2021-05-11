@@ -160,6 +160,11 @@ body {
   background: url(../assets/icons/loader.svg) center center no-repeat
 
  }
+ 
+ .lightbox.fadeOut {
+   opacity: 0;
+   transition: opacity ease-in-out .6;
+ }
 
  @keyframes lightboxIn {
    from {opacity: 0;}
