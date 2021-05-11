@@ -8,9 +8,9 @@ const displayData = async () => {
   const element = document.querySelector('.photographer');
   console.log(media)
   
-  photographers.forEach( item => {
-    let photographer = new Photographer(item);
-    element.innerHTML += photographer.userCard;
+  photographers.forEach(photographer => {
+    let photographerModel = new Photographer(photographer);
+    element.innerHTML += photographerModel.userCard;
     /* photographer.userTags */
   })
 }

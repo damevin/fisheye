@@ -7,7 +7,7 @@ class Photographer {
         this._picture = data.portrait
         this._price = data.price
         this._tagline = data.tagline
-        this._tags = data.tags
+        this._tags = data.tags.map(tag => new Tag(tag))
     }
 
     get picture() {
@@ -40,6 +40,10 @@ class Photographer {
             <p >${this._tags.map(tag => `<a href="../index.html">#${tag}</a>`).join(" ")}</p>
         </div>
         `
+    }
+  
+    get tags() {
+        console.log(this._tags)
     }
 
     /* userTags() {
