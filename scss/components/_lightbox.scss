@@ -1,0 +1,79 @@
+.lightbox {
+ animation: lightboxIn .5s;
+ background-color: rgba(0,0,0, .90);
+ height: 100%;
+ left: 0;
+ position: fixed;
+ top: 0;
+ width: 100%;
+ z-index: 10;
+}
+
+.lightbox__container {
+  align-items: center;
+  display: flex;
+  justify-content: center;
+  margin-left: 50px;
+  margin-right: 50px;
+  min-height: 100vh;
+  padding: 3rem;
+}
+
+.lightbox__container img {
+  animation: lightboxIn .5s;
+  height: auto;
+  max-width: 100%;
+}
+
+.lightbox__next,
+.lightbox__previous {
+  background: url(../assets/icons/arrow-right.svg) center center / 100% 100%;
+  border: none;
+  cursor: pointer;
+  height: 100%;
+  margin-top: -24px;
+  position: fixed;
+  right: 0;
+  text-indent: -3000px;
+  top: 0;
+  width: 36px;
+}
+
+.lightbox__next:hover,
+.lightbox__previous:hover {
+  opacity: 1;
+
+}
+
+.lightbox__previous {
+  right: auto;
+  left: 0;
+  transform: rotate(180deg);
+}
+
+.lightbox__close {
+  background: url(../assets/icons/cross.svg) center center / 100% 100% no-repeat;
+  position: fixed;
+  border: none;
+  height: 40px;
+  width: 40px;
+  top: 20px;
+  right: 20px;
+  z-index: 12;
+}
+
+.lightbox button {
+  cursor: pointer;
+  opacity: .7;
+  text-indent: -3000px;
+  transition: opacity .3s;
+}
+
+.lightbox button:hover {
+  opacity: 1;
+}
+
+@keyframes lightboxIn {
+  from {opacity: 0;}
+  to {opacity: 1}
+}
