@@ -6,12 +6,11 @@ const getData = async () => await fetch("../data/photographers.json", {mode: 'no
 const displayData = async () => {
   const { media, photographers } = await getData();
   const element = document.querySelector('.photographer');
-  console.log(media)
+
   
   photographers.forEach(photographer => {
     let photographerModel = new Photographer(photographer);
     element.innerHTML += photographerModel.userCard;
-    /* photographer.userTags */
   })
 }
 
