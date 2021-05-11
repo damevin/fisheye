@@ -105,7 +105,7 @@ class Lightbox {
 
  /**
   * 
-  * @param {*string} url Media URL
+  * @param {string} url Media URL
   * @return {HTMLElement}
   */
  buildDOM(url) {
