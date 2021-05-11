@@ -27,11 +27,11 @@
     <main class="photographer-page">
         <div class="photographer-page__header">
         </div>
-        <button id="myBtn">Contact me</button>
+        <button id="photographer-page__contact__button">Contact me</button>
         <div class="photographer-page__gallery">
         </div>
     </main>
-    <div id="myModal" class="modal">
+    <div id="contact__modal" class="modal">
         <div class="modal-content">
             <header class="modal-header">
                 <h1 class="modal-header-title">Contactez-moi</h1>
@@ -49,16 +49,19 @@
                 <div class="form-field">
                     <label for="lastname" class="form-label">Email</label>
                     <input class="form-input"  type="email" name="lastname" id="email" required>
-                  </div>
-                  <div class="form-field">
+                </div>
+                <div class="form-field">
                     <label for="message" class="form-label">Votre message</label>
                     <input class="form-text-area" id="message">
                     </input>
-                  </div>
-                <div class="form-submit">
-                  <input type="submit" class="form-submit-button" value="Envoyer">
                 </div>
-              </form>
+                
+            </form>  
+            <div class="form-submit">
+                <button id="form-submit-button" class="form-submit-button" >
+                    Envoyer
+                </button> 
+            </div>
         </div>
     </div>
 
