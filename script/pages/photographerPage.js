@@ -8,9 +8,9 @@ async function displayPhotographerData() {
     const galery = media.filter(media => media.photographerId == id)
     const $elementGalery = document.querySelector('.photographer-page__gallery')
     galery.forEach(image => {
-        console.log(image)
         $elementGalery.innerHTML += `<img class="photographer-page__gallery__photography" src='../assets/medias/${photographer.name}/${image.image}'>`
     }); 
 }
 
 displayPhotographerData()
+
