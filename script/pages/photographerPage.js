@@ -12,5 +12,10 @@ async function displayPhotographerData() {
     }); 
 }
 
-displayPhotographerData()
+const main = async () => {
+    await displayPhotographerData()
+    Lightbox.init();
+} 
+
+main()
 

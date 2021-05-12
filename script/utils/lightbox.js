@@ -126,8 +126,3 @@ class Lightbox {
   return dom
  }
 }
-
-/**
- * TO DO: Find a better way to do that 
- */
-setTimeout(function(){ Lightbox.init(); }, 1000);
