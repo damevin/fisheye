@@ -7,6 +7,7 @@
       rel="stylesheet"
     />
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <!-- TO DO : Ajouter la nom du bon photographe en titre de page -->
     <title>Fisheye - Mimi Keel</title>
 </head>
 <body>
@@ -27,10 +28,45 @@
     <main class="photographer-page">
         <div class="photographer-page__header">
         </div>
+        <!-- TO DO : Faire la style du bouton -->
+        <button id="photographer-page__contact__button">Contact me</button>
         <div class="photographer-page__gallery">
         </div>
     </main>
+    <div id="contact__modal" class="modal">
+        <div class="modal-content">
+            <header class="modal-header">
+                <h1 class="modal-header-title">Contactez-moi</h1>
+                <span class="close">&times;</span>
+            </header>
+            <form class="form">
+                <div class="form-field">
+                  <label for="firstname" class="form-label">Prénom</label>
+                  <input class="form-input" type="text" name="firstname" id="firstname" required>
+                </div>
+                <div class="form-field">
+                  <label for="lastname" class="form-label">Nom</label>
+                  <input class="form-input"  type="text" name="lastname" id="lastname" required>
+                </div>
+                <div class="form-field">
+                    <label for="lastname" class="form-label">Email</label>
+                    <input class="form-input"  type="email" name="lastname" id="email" required>
+                </div>
+                <div class="form-field">
+                    <label for="message" class="form-label">Votre message</label>
+                    <input class="form-text-area" id="message">
+                </div>  
+            </form>  
+            <footer class="form-submit">
+                <button id="form-submit-button" class="form-submit-button" >
+                    Envoyer
+                </button> 
+            </footer>
+        </div>
+    </div>
+
     <script src="/script/utils/fetchAPI.js"></script>
     <script src="/script/constructors/Photographer.js"></script>
     <script src="/script/pages/photographerPage.js"></script>
+    <script src="/script/utils/contactForm.js"></script>
 </body>
