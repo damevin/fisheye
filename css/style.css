@@ -47,7 +47,7 @@ body {
   border: 1px solid #888;
   margin: auto;
   padding: 0rem 2rem 9rem 2rem;
-  width: 80%;
+  width: 60%;
 }
 
 .modal-form {
@@ -72,8 +72,14 @@ body {
   width: 100%;
 }
 
-.form-input:focus {
-  border: 1px solid red;
+.form-input,
+.form-text-area {
+  outline: none;
+}
+
+.form-input:focus,
+.form-text-area:focus {
+  border: 5px solid #333;
 }
 
 .form-text-area {
