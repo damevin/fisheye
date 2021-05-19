@@ -19,3 +19,24 @@ body {
 
     }
 }
+
+
+
+// Medium devices (tablets, 768px and up)
+@media (min-width: 768px) { 
+    
+ }
+
+// Large devices (desktops, 992px and up)
+@media (min-width: 992px) { 
+    .photographer {
+        &__section {
+            display: grid;
+            grid-template-columns: repeat(3, 1fr);
+            grid-template-rows: auto;
+        }
+    }
+ }
+
+// X-Large devices (large desktops, 1200px and up)
+@media (min-width: 1200px) {}
