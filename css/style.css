@@ -320,6 +320,13 @@ body {
   }
 }
 
+@media (min-width: 1200px) {
+  .photographer__section {
+    margin: auto;
+    max-width: 1200px;
+  }
+}
+
 .photographer-page {
   align-items: center;
   display: flex;
