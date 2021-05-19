@@ -71,6 +71,7 @@
 			"likes": 62,
 			"date": "2011-12-08",
 			"price": 55,
+			"type": "image",
 			"description": "Plan en pied d'une jeune femme brune vétue d'une tenue jaune, vue sur la mer et un terrain de basket, couleurs chaudes"
 		},
 		{
@@ -82,6 +83,7 @@
 			"likes": 11,
 			"date": "2011-11-06",
 			"price": 55,
+			"type": "image",
 			"description": "Plan en pied d'une jeune femme blonde vétue d'une robe style tropicale, positionnée sur un pont au milieu de la route"
 		},
 		{
@@ -93,6 +95,7 @@
 			"likes": 72,
 			"date": "2013-08-12",
 			"price": 55,
+			"type": "image",
 			"description": "Plan taille d'une jeune femme brune vétue d'une robe à rayoures verticales, équipée d'un sac en bandouillère rouge, et d'une écharpe jaune moutarde"
 		},
 		{
@@ -104,6 +107,7 @@
 			"likes": 69,
 			"date": "2018-02-22",
 			"price": 55,
+			"type": "image",
 			"description": "Allée d'une cérémonie d'un mariage, arche fleurie avec une table pour les mariées"
 		},
 		{
@@ -115,6 +119,7 @@
 			"likes": 2,
 			"date": "2020-05-25",
 			"price": 55,
+			"type": "image",
 			"description": "Cérémonie de mariage la nuit, les invitées ont des sparklers dans les mains et félicitent les mariés"
 		},
 		{
@@ -126,6 +131,7 @@
 			"likes": 33,
 			"date": "2019-06-12",
 			"price": 55,
+			"type": "image",
 			"description": "Décoration d'une table d'anniversaire de 18ans"
 		},
 		{
@@ -137,6 +143,7 @@
 			"likes": 24,
 			"date": "2011-12-08",
 			"price": 100,
+			"type": "video",
 			"description": "Sculpture d'un cheval en bois"
 		},
 		{
@@ -148,6 +155,7 @@
 			"likes": 88,
 			"date": "2007-05-07",
 			"price": 55,
+			"type": "image",
 			"description": "Streetart géométrique avec des couleurs vives"
 		},
 		{
@@ -159,6 +167,7 @@
 			"likes": 24,
 			"date": "2018-05-05",
 			"price": 55,
+			"type": "image",
 			"description": "Sous-terrain avec des grafitis, néons roses"
 		},
 		{
@@ -170,6 +179,7 @@
 			"likes": 75,
 			"date": "2019-11-25",
 			"price": 55,
+			"type": "image",
 			"description": "Streetart d'oiseaux, couleurs pastelles"
 		},
 
@@ -182,6 +192,7 @@
 			"likes": 52,
 			"date": "2013-02-30",
 			"price": 70,
+			"type": "image",
 			"description": "Photo prise du dessus de deux athlètes qui rament au milieu d'un fleuve"
 		},
 		{
@@ -193,6 +204,7 @@
 			"likes": 58,
 			"date": "2018-07-17",
 			"price": 70,
+			"type": "image",
 			"description": "Modèles qui prennent la pause"
 		},
 		{
@@ -204,6 +216,7 @@
 			"likes": 11,
 			"date": "2019-08-12",
 			"price": 70,
+			"type": "image",
 			"description": "Femme vétue d'une robe rouge, avec des lunettes de soleil"
 		},
 		{
@@ -215,6 +228,7 @@
 			"likes": 2,
 			"date": "2019-01-02",
 			"price": 70,
+			"type": "image",
 			"description": "Daily meeting d'une entreprise où la speakeuse donne des informations"
 		},
 		{
@@ -226,6 +240,7 @@
 			"likes": 3,
 			"date": "2019-05-20",
 			"price": 70,
+			"type": "image",
 			"description": "Pitch d'un intervenant d'une entreprise"
 		},
 		{
@@ -237,6 +252,7 @@
 			"likes": 52,
 			"date": "2019-07-18",
 			"price": 70,
+			"type": "image",
 			"description": "Noir et blanc d'une pianiste sur scène qui joues du synthétiseur"
 		},
 		{
@@ -248,6 +264,7 @@
 			"likes": 23,
 			"date": "2018-02-22",
 			"price": 70,
+			"type": "image",
 			"description": "Portrait d'un speakeur sur scène avec un micro à la main"
 		},
 		{
@@ -259,6 +276,7 @@
 			"likes": 52,
 			"date": "2017-03-13",
 			"price": 70,
+			"type": "image",
 			"description": "Portrait d'un cerf aux longs bois"
 		},
 		{
@@ -270,6 +288,7 @@
 			"likes": 52,
 			"date": "2016-06-12",
 			"price": 70,
+			"type": "video",
 			"description": "Vidéo d'un chiot en bord de mer"
 		},
 
@@ -282,6 +301,7 @@
 			"likes": 23,
 			"date": "2017-03-18",
 			"price": 45,
+			"type": "video",
 			"description": "Plan drone d'une chaîne de montagnes vue du dessus"
 		},
 		{
@@ -293,6 +313,7 @@
 			"likes": 101,
 			"date": "2017-04-03",
 			"price": 45,
+			"type": "image",
 			"description": "Des personnes se baignent dans des thermes en extérieur"
 		},
 		{
@@ -304,6 +325,7 @@
 			"likes": 99,
 			"date": "2018-04-30",
 			"price": 45,
+			"type": "image",
 			"description": "Vue d'une longue route dans un paysage inhabité"
 		},
 		{
@@ -315,6 +337,7 @@
 			"likes": 34,
 			"date": "2016-04-05",
 			"price": 45,
+			"type": "image",
 			"description": "Point of vue sur une pont dans la forêt"
 		},
 		{
@@ -326,6 +349,7 @@
 			"likes": 23,
 			"date": "2017-03-18",
 			"price": 45,
+			"type": "image",
 			"description": "Vue a bord d'un bateau sur une chaîne de montagnes"
 		},
 		{
@@ -337,6 +361,7 @@
 			"likes": 66,
 			"date": "2018-05-24",
 			"price": 45,
+			"type": "image",
 			"description": "Portrait d'une femme rousse souriante"
 		},
 		{
@@ -348,6 +373,7 @@
 			"likes": 52,
 			"date": "2017-04-21",
 			"price": 45,
+			"type": "image",
 			"description": "Portrait en noir et blanc d'une homme qui regarde à sa gauche"
 		},
 		{
@@ -359,6 +385,7 @@
 			"likes": 95,
 			"date": "2018-11-02",
 			"price": 45,
+			"type": "image",
 			"description": "Portrait d'une femme en noir et blanc"
 		},
 		{
@@ -370,6 +397,7 @@
 			"likes": 25,
 			"date": "2019-01-02",
 			"price": 45,
+			"type": "image",
 			"description": "Portrait en noir et blanc d'un homme âgé "
 		},
 
@@ -382,6 +410,7 @@
 			"likes": 88,
 			"date": "2019-02-03",
 			"price": 45,
+			"type": "image",
 			"description": "Paysage montagneux et levé de soleil"
 		},
 		{
@@ -393,6 +422,7 @@
 			"likes": 85,
 			"date": "2019-04-03",
 			"price": 45,
+			"type": "image",
 			"description": "Paysage de maisons colorées sur une montagne"
 		},
 		{
@@ -404,6 +434,7 @@
 			"likes": 34,
 			"date": "2019-04-07",
 			"price": 45,
+			"type": "image",
 			"description": "Portrait d'une enfant en noir et blanc"
 		},
 		{
@@ -415,6 +446,7 @@
 			"likes": 63,
 			"date": "2019-04-07",
 			"price": 45,
+			"type": "image",
 			"description": "Portrait aux couleurs froides d'une femme à lunettes"
 		},
 		{
@@ -426,6 +458,7 @@
 			"likes": 55,
 			"date": "2019-06-20",
 			"price": 45,
+			"type": "image",
 			"description": "Portrait d'une femme en noir et blanc"
 		},
 		{
@@ -437,6 +470,7 @@
 			"likes": 25,
 			"date": "2019-06-21",
 			"price": 45,
+			"type": "image",
 			"description": "Vue d'une table de cérémonie décorée en bord de mer"
 		},
 		{
@@ -448,6 +482,7 @@
 			"likes": 52,
 			"date": "2019-06-25",
 			"price": 45,
+			"type": "image",
 			"description": "Portrait de deux jeunes mariés"
 		},
 		{
@@ -459,6 +494,7 @@
 			"likes": 77,
 			"date": "2019-06-28",
 			"price": 45,
+			"type": "image",
 			"description": "Portrait de deux jeunes mariés pendant la cérémonie"
 		},
 		{
@@ -470,6 +506,7 @@
 			"likes": 142,
 			"date": "2019-08-23",
 			"price": 60,
+			"type": "video",
 			"description": "Vidéo de chevaux sauvages dans la montagne"
 		},
 		{
@@ -481,6 +518,7 @@
 			"likes": 59,
 			"date": "2019-07-02",
 			"price": 60,
+			"type": "image",
 			"description": "Portrait d'un petit oiseau coloré"
 		},
 
@@ -493,6 +531,7 @@
 			"likes": 25,
 			"date": "2019-04-03",
 			"price": 60,
+			"type": "image",
 			"description": "Paysage japonnais avec tour en arrière plan"
 		},
 		{
@@ -504,6 +543,7 @@
 			"likes": 53,
 			"date": "2019-05-06",
 			"price": 60,
+			"type": "image",
 			"description": "Couché de soleil à venise"
 		},
 		{
@@ -515,6 +555,7 @@
 			"likes": 33,
 			"date": "2019-05-12",
 			"price": 60,
+			"type": "image",
 			"description": "Paysage montagneux avec lac bleu turquoise"
 		},
 		{
@@ -526,6 +567,7 @@
 			"likes": 53,
 			"date": "2019-06-20",
 			"price": 60,
+			"type": "image",
 			"description": "Rue avec immeuble style hosmanien et velo en premier plan"
 		},
 		{
@@ -537,6 +579,7 @@
 			"likes": 63,
 			"date": "2019-06-26",
 			"price": 60,
+			"type": "image",
 			"description": "Paysage vu de l'intérieur d'une porte indienne"
 		},
 		{
@@ -548,6 +591,7 @@
 			"likes": 52,
 			"date": "2019-06-30",
 			"price": 60,
+			"type": "image",
 			"description": "Photo du kremlin à Moscou"
 		},
 		{
@@ -559,6 +603,7 @@
 			"likes": 63,
 			"date": "2019-07-20",
 			"price": 60,
+			"type": "image",
 			"description": "Paysage architectural de maisons sur une coline"
 		},
 		{
@@ -570,6 +615,7 @@
 			"likes": 88,
 			"date": "2020-01-05",
 			"price": 60,
+			"type": "image",
 			"description": "Tour de pise vue d'en bas"
 		},
 		{
@@ -581,6 +627,7 @@
 			"likes": 57,
 			"date": "2020-01-20",
 			"price": 65,
+			"type": "video",
 			"description": "Vue d'une autoroute du haut"
 		},
 		{
@@ -592,6 +639,7 @@
 			"likes": 54,
 			"date": "2020-05-05",
 			"price": 60,
+			"type": "image",
 			"description": "Photographie architecturale d'un immeuble, ciel bleu en arrière plan"
 		},
 
@@ -604,6 +652,7 @@
 			"likes": 150,
 			"date": "2018-02-30",
 			"price": 70,
+			"type": "video",
 			"description": "Vidéo d'une gymnaste qui fait des figures"
 		},
 		{
@@ -615,6 +664,7 @@
 			"likes": 101,
 			"date": "2018-03-05",
 			"price": 65,
+			"type": "image",
 			"description": "Une escaladeuse grimpe sur un rocher"
 		},
 		{
@@ -626,6 +676,7 @@
 			"likes": 103,
 			"date": "2018-03-10",
 			"price": 70,
+			"type": "image",
 			"description": "Un surfeur qui surfe dans une vague"
 		},
 		{
@@ -637,6 +688,7 @@
 			"likes": 77,
 			"date": "2018-04-16",
 			"price": 50,
+			"type": "image",
 			"description": "Skieur qui fait une figure en l'air"
 		},
 		{
@@ -648,6 +700,7 @@
 			"likes": 88,
 			"date": "2018-04-22",
 			"price": 65,
+			"type": "image",
 			"description": "Athlètistes en pleine course"
 		},
 		{
@@ -659,6 +712,7 @@
 			"likes": 95,
 			"date": "2018-04-27",
 			"price": 70,
+			"type": "image",
 			"description": "Skateurs dans un bowl en bord de mer"
 		},
 		{
@@ -670,6 +724,7 @@
 			"likes": 52,
 			"date": "2018-05-03",
 			"price": 75,
+			"type": "image",
 			"description": "Architecture intérieure en blanc"
 		},
 		{
@@ -681,6 +736,7 @@
 			"likes": 55,
 			"date": "2018-05-10",
 			"price": 72,
+			"type": "image",
 			"description": "Architecture"
 		},
 		{
@@ -692,6 +748,7 @@
 			"likes": 85,
 			"date": "2018-05-15",
 			"price": 71,
+			"type": "image",
 			"description": "Architecture d'un immeuble en rond"
 		},
 		{
@@ -703,6 +760,7 @@
 			"likes": 66,
 			"date": "2018-05-20",
 			"price": 58,
+			"type": "image",
 			"description": "Architecture d'un immeuble vue d'en bas"
 		},
 		{
@@ -714,6 +772,7 @@
 			"likes": 79,
 			"date": "2018-05-21",
 			"price": 80,
+			"type": "image",
 			"description": "Immeuble à l'architecture géométrique"
 		}
 	]
