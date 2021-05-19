@@ -324,17 +324,30 @@ a  {
   left: 20px;
   top: 40px;
   width: 150px;
+  height: 37.5px;
+  margin-bottom: 2rem;
 }
 
 .photographer-page__header {
   display: flex;
   justify-content: space-between;
-  height: 200px;
+  align-items: center;
+  margin-top: 1.5rem;
+}
+
+.photographer-page__header__content__title {
+  font-size: 1.9rem;
+  line-height: 1.8rem;
+  margin: 0;
+}
+
+.photographer-page__header__content__localization {
+  margin: 0.5rem 0rem;
 }
 
 .photographer-page__header__photo {
-  height: 200px;
-  width: 200px;
+  height: 120px;
+  min-width: 120px;
   border-radius: 50%;
   object-fit: cover;
 }
