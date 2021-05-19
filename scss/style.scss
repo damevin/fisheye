@@ -1,5 +1,4 @@
-@import "./layout/index";
-@import "./components/index";
-@import "./variables/index";
-@import "./utils/index";
-@import "./pages/_index"
+@import "variables/_index.scss";
+@import "components/_index.scss";
+@import "layout/_index.scss";
+@import "utils/_index.scss";
