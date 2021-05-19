@@ -1,45 +1,45 @@
-class Media {
-  /**
-   * @constructor
-   * @param {number} data.id
-   * @param {string} data.photographerId
-   * @param {string} data.filename
-   * @param {array | string} data.tags
-   * @param {number} data.likes
-   * @param {number} data.price
-   * @param {string} data.altText
-   */
- constructor(data){
-  this.id = data.id
-  this.photographerId = data.photographerId
-  this.filename = data.filename
-  this.tags = data.tags
-  this.price = data.price
-  this.altText = data.altText
- }
+class MediaFactory {
+    constructor(data, type) {
+
+        console.log("====")
+        console.log(type)
+        console.log("====")
+        
+        if (type === 'image') {
+            return new Photography(data)
+        } else if (type === 'video') {
+            return new Video(data)
+        } else {
+            throw 'Unknown Media Type'
+        }
+    }
 }
 
-class Photography extends Media {
-  /**
-   * Récupère le bon chemin pour la source de la photographie
-   * @returns {string}
-   */
-  createSource() {
-    return `
-    src='../assets/medias/${this._name}/${this._image}'`
-  }
+class Photography {
+    constructor(data) {
+        this._imgSrc = data.image
+        this._imgAlt = data.alt
+    }
 
-  /**
-   * Créer l'élément HTML de la photographie
-   * @returns {HTMLElement}
-   */
-  createHTML() {
-    let elementPhotography = document.createElement('img')
-    elementPhotography.setAttribute('alt', this.alt)
-    elementPhotography.setAttribute('role', 'button')
-    elementPhotography.setAttribute('src', this.createSource)
-    elementPhotography.className = 'photographer-page__gallery__photography'
-    return elementPhotography;
-  }
-
+    createHtml() {
+        return `<img src="${this._imgSrc}" alt="${this._imgAlt}" />`
+    }
 }
+
+class Video {
+    constructor(data) {
+        this._src = data.src
+        this._title = data.title
+    }
+
+    createHtml() {
+        return `
+            <video controls>
+                <source src="${this._src}" />
+            </video>
+        `
+    }
+}
+
+const PhotographyTest = new MediaFactory({ src: "sdsdsds", alt: "sdsddsd" }, 'photography')
+console.log(PhotographyTest.createHtml())
