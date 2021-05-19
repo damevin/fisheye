@@ -127,22 +127,6 @@
   }
 }
 
-.filters__navigation {
-  display: flex;
-  flex-wrap: wrap;
-  justify-content: center;
-  margin-top: 20px;
-  gap: 0.5rem 0.3rem;
-}
-
-.filters__navigation__tag {
-  border: 1px solid #C4C4C4;
-  color: #901c1c;
-  padding: 0rem 0.5rem;
-  border-radius: 11px;
-  font-size: 14px;
-}
-
 .photographer {
   margin: 2rem 0rem 2rem 0rem;
   text-align: center;
@@ -294,29 +278,93 @@
 
 body {
   padding: 40px 10px;
-  font-family: 'DM Sans', sans-serif;
+  font-family: "DM Sans", sans-serif;
 }
 
-.banner {
-  display: flex;
-  align-items: center;
-  justify-content: space-around;
+.header {
+  display: grid;
+  grid-template-columns: 50% 50%;
+  gap: 1rem 0rem;
+  grid-template-rows: repeat(2, 1fr);
 }
 
 .header__logo {
-  width: 150px;
+  grid-column: 1;
+  grid-row: 1;
+  margin: auto;
+  width: 130px;
 }
 
 .header__title {
+  color: #901c1c;
   font-size: 14px;
   font-weight: 500;
+  grid-column: 2;
+  margin: auto;
+}
+
+.header__filters {
+  grid-column: span 2;
+  grid-row: 2;
+  margin: auto;
+}
+
+.header__filters__navigation {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 0.5rem 0.3rem;
+  justify-content: center;
+}
+
+.header__filters__navigation__tag {
+  border: 1px solid #C4C4C4;
+  color: #901c1c;
+  padding: 0rem 0.5rem;
+  border-radius: 11px;
+  font-size: 14px;
+}
+
+@media (min-width: 768px) {
+  .header__logo {
+    width: 160px;
+  }
+  .header__title {
+    font-size: 22px;
+  }
+  .photographer__section {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    grid-template-rows: auto;
+  }
 }
 
 @media (min-width: 992px) {
+  .header {
+    grid-template-columns: 0.5fr 2fr 0.8fr;
+    grid-template-rows: 1fr;
+  }
+  .header__logo {
+    width: 180px;
+    grid-column: 1;
+    margin: auto;
+  }
+  .header__title {
+    grid-column: 3;
+    margin: auto;
+    font-size: 25px;
+  }
+  .header__filters {
+    grid-column: 2;
+    grid-row: 1;
+    margin: auto;
+  }
   .photographer__section {
     display: grid;
     grid-template-columns: repeat(3, 1fr);
     grid-template-rows: auto;
+  }
+  .banner {
+    display: flex;
   }
 }
 
