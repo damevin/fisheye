@@ -1,13 +1,13 @@
 class MediaFactory {
-    constructor(data, type) {
+    constructor(data) {
 
         console.log("====")
-        console.log(type)
+        console.log(data)
         console.log("====")
         
-        if (type === 'image') {
+        if (data.type === 'image') {
             return new Photography(data)
-        } else if (type === 'video') {
+        } else if (data.type === 'video') {
             return new Video(data)
         } else {
             throw 'Unknown Media Type'
@@ -18,28 +18,31 @@ class MediaFactory {
 class Photography {
     constructor(data) {
         this._imgSrc = data.image
-        this._imgAlt = data.alt
+        this._imgAlt = data.description
+        this._imgTitle = data.title
+        this._imgPhotographerId = data.photographerId
     }
 
     createHtml() {
-        return `<img src="${this._imgSrc}" alt="${this._imgAlt}" />`
+        return `<img class="photographer-page__gallery__photography" loading="lazy" src="../assets/medias/${this._imgPhotographerId}/${this._imgSrc}" alt="${this._imgAlt}" />`
     }
 }
 
 class Video {
     constructor(data) {
-        this._src = data.src
-        this._title = data.title
+        this._videoSrc = data.video
+        this._videoTitle = data.title
+        this._videoPhotographerId = data.photographerId
     }
 
     createHtml() {
         return `
-            <video controls>
-                <source src="${this._src}" />
+            <video controls class="photographer-page__gallery__photography">
+                <source src="../assets/medias/${this._videoPhotographerId}/${this._videoSrc}" />
             </video>
         `
     }
 }
 
-const PhotographyTest = new MediaFactory({ src: "sdsdsds", alt: "sdsddsd" }, 'photography')
-console.log(PhotographyTest.createHtml())
+
+
