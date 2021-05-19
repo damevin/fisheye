@@ -19,6 +19,141 @@ body {
   font-weight: 500;
 }
 
+/* The Modal (background) */
+.modal {
+  background-color: black;
+  /* Fallback color */
+  background-color: rgba(0, 0, 0, 0.4);
+  /* Black w/ opacity */
+  display: none;
+  /* Hidden by default */
+  height: 100%;
+  /* Full height */
+  left: 0;
+  overflow: auto;
+  /* Enable scroll if needed */
+  position: fixed;
+  /* Stay in place */
+  top: 0;
+  width: 100%;
+  /* Full width */
+  z-index: 1;
+  /* Sit on top */
+}
+
+/* Modal Content */
+.modal-content {
+  background-color: #db8776;
+  border: 1px solid #888;
+  margin: auto;
+  padding: 0rem 2rem 9rem 2rem;
+  width: 60%;
+}
+
+.modal-form {
+  padding: 1rem 0rem;
+}
+
+.modal-header {
+  align-items: center;
+  display: flex;
+  justify-content: space-between;
+}
+
+.modal-header-title {
+  font-size: 36px;
+  line-height: 46,87px;
+}
+
+.form-input {
+  border-radius: 5px;
+  border: none;
+  height: 52px;
+  width: 100%;
+}
+
+.form-input,
+.form-text-area {
+  outline: none;
+}
+
+.form-input:focus,
+.form-text-area:focus {
+  border: 5px solid #333;
+}
+
+.form-text-area {
+  height: 184px;
+  border: none;
+  border-radius: 5px;
+}
+
+.form-field {
+  display: flex;
+  flex-direction: column;
+  margin-bottom: 1rem;
+}
+
+.form-label {
+  font-size: 24px;
+  font-weight: 400;
+}
+
+.form-submit {
+  display: flex;
+  justify-content: center;
+}
+
+.form-submit-button {
+  background-color: #911C1C;
+  border-radius: 5px;
+  border: none;
+  color: white;
+  font-size: 18px;
+  font-weight: 700;
+  height: 35px;
+  width: 170px;
+}
+
+/* The Close Button */
+.close {
+  color: #000;
+  font-size: 28px;
+  font-weight: bold;
+}
+
+.close:hover,
+.close:focus {
+  color: #000;
+  text-decoration: none;
+  cursor: pointer;
+}
+
+@media (min-width: 992px) {
+  .modal {
+    padding: 1rem 2rem;
+  }
+  .modal-content {
+    padding: 1rem 2rem;
+    margin: auto;
+  }
+  .modal-header-title {
+    font-size: 64px;
+  }
+  .form-label {
+    font-size: 36px;
+    font-weight: 400;
+  }
+  .form-submit {
+    justify-content: flex-start;
+    padding-bottom: 3rem;
+  }
+  .form-submit-button {
+    height: 69px;
+    width: 170px;
+  }
+}
+
 .filters__navigation {
   display: flex;
   flex-wrap: wrap;
@@ -77,6 +212,101 @@ body {
 .photographer__tag {
   color: red;
 }
+
+.lightbox {
+  animation: lightboxIn .5s;
+  background-color: rgba(255, 253, 253, 0.9);
+  height: 100%;
+  left: 0;
+  position: fixed;
+  top: 0;
+  width: 100%;
+  z-index: 10;
+ }
+
+ .lightbox__container {
+   align-items: center;
+   display: flex;
+   justify-content: center;
+   margin-left: 50px;
+   margin-right: 50px;
+   min-height: 100vh;
+   padding: 3rem;
+ }
+
+ .lightbox__container img {
+   animation: lightboxIn .5s;
+   height: auto;
+   max-width: 100%;
+ }
+
+ .lightbox__next,
+ .lightbox__previous {
+   background: url(../assets/icons/arrow-right.svg) center center / 100% 100%;
+   border: none;
+   cursor: pointer;
+   height: 100%;
+   margin-top: -24px;
+   position: fixed;
+   right: 0;
+   text-indent: -3000px;
+   top: 0;
+   width: 36px;
+ }
+
+ .lightbox__next:hover,
+ .lightbox__previous:hover {
+   opacity: 1;
+
+ }
+
+ .lightbox__previous {
+   right: auto;
+   left: 0;
+   transform: rotate(180deg);
+ }
+
+ .lightbox__close {
+   background: url(../assets/icons/cross.svg) center center / 100% 100% no-repeat;
+   position: fixed;
+   border: none;
+   height: 40px;
+   width: 40px;
+   top: 20px;
+   right: 20px;
+   z-index: 12;
+ }
+
+ .lightbox button {
+   cursor: pointer;
+   opacity: .7;
+   text-indent: -3000px;
+   transition: opacity .3s;
+ }
+
+ .lightbox button:hover {
+   opacity: 1;
+ }
+
+ .lightbox__loader {
+  width: 40px;
+  height: 40px;
+  opacity: .4;
+  background: url(../assets/icons/loader.svg) center center no-repeat
+
+ }
+ 
+ .lightbox.fadeOut {
+   opacity: 0;
+   transition: opacity ease-in-out .6;
+ }
+
+ @keyframes lightboxIn {
+   from {opacity: 0;}
+   to {opacity: 1}
+ }
+
+
 
 ul {
   list-style-type: none;
