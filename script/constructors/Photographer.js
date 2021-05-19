@@ -30,10 +30,9 @@ class Photographer {
 
     /**
      * Create photographer card 
-     * @returns {string}
+     * @returns {string} - Return user card
      */
     get userCard() {
-        console.log(this.data)
         return `
             <article class="photographer">
                 <a href="pages/photographer-page.html?id=${this._id}">
@@ -45,12 +44,11 @@ class Photographer {
                 <p class="photographer__price">${this._price}€/jour</p>
                 <ul class="photographer__taglist">${this._tags.map(tag => `<li class="photographer__tag">#${tag}</li>`).join('')}</ul>
             </article>`
-
     }
 
     /**
      * Create photographer header on his page
-     * @returns {string}
+     * @returns {string} Return user header
      */
     get userHeader() {
        return  `
