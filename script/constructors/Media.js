@@ -21,10 +21,22 @@ class Photography {
         this._imgAlt = data.description
         this._imgTitle = data.title
         this._imgPhotographerId = data.photographerId
+        this._imgLikes = data.likes
     }
 
     createHtml() {
-        return `<img class="photographer-page__gallery__photography" loading="lazy" src="../assets/medias/${this._imgPhotographerId}/${this._imgSrc}" alt="${this._imgAlt}" />`
+        return `
+        <div>
+            <img class="photographer-page__gallery__media" loading="lazy" src="../assets/medias/${this._imgPhotographerId}/${this._imgSrc}" alt="${this._imgAlt}" />
+            <footer class="photographer-page__gallery__media__footer">
+                <p>${this._imgTitle}</p>
+                <div class="photographer-page__gallery__media__footer__like-section">
+                    <p class="photographer-page__gallery__media__footer__like-section-counter">${this._imgLikes}</p>
+                    <button  class="photographer-page__gallery__media__footer__like-section-button">Like</button>
+                </div>
+            </footer>
+        </div>
+        `
     }
 }
 
@@ -33,13 +45,21 @@ class Video {
         this._videoSrc = data.video
         this._videoTitle = data.title
         this._videoPhotographerId = data.photographerId
+        this._videoLikes = data.likes
     }
 
     createHtml() {
         return `
-            <video controls class="photographer-page__gallery__photography">
+            <video controls class="photographer-page__gallery__media">
                 <source src="../assets/medias/${this._videoPhotographerId}/${this._videoSrc}" />
             </video>
+            <footer class="photographer-page__gallery__media__footer">
+                <p>${this._videoTitle}</p>
+                <div class="photographer-page__gallery__media__footer__like-section">
+                    <p class="photographer-page__gallery__media__footer__like-section-counter">${this._videoLikes}</p>
+                    <button  class="photographer-page__gallery__media__footer__like-section-button">Like</button>
+                </div>
+            </footer>
         `
     }
 }
