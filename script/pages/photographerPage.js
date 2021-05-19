@@ -2,10 +2,7 @@
  * Display photographer data on photographer page
  * @async 
  * @function displayPhotographerData
- * @constant {media | photographers} await @function getData 
- * @constant {string} id - Get current id in page URL
- * @constant {object} selectedPhotographerData - Find object in array who match with the id
- * @constant {HTMLElement} templ
+ * 
  */
 async function displayPhotographerData() {
     const { media, photographers } = await getData()
