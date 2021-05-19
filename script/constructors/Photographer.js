@@ -25,7 +25,7 @@ class Photographer {
      * @returns {string}
      */
     get localization() {
-        return `${this._city} ${this._country}`
+        return `${this._city}, ${this._country}`
     }
 
     /**
@@ -56,6 +56,7 @@ class Photographer {
             <div class="photographer-page__header__content">
                 <h1 role="header" class="photographer-page__header__content__title">${this._name}</h1>
                 <p class="photographer-page__header__content__localization">${this.localization}</p>
+                <p class="photographer-page__header__content__tagline">${this._tagline}</p>
                 <p >${this._tags.map(tag => `<a href="../index.html">#${tag}</a>`).join(" ")}</p>
             </div>
             <img src="${this.picture}" class="photographer-page__header__photo">
