@@ -1,15 +1,21 @@
+/**
+ * Display photographer data on photographer page
+ * @async 
+ * @function displayPhotographerData
+ * 
+ */
 async function displayPhotographerData() {
     const { media, photographers } = await getData()
     const id = window.location.search.split('id=')[1];
-    const photographer =  photographers.find(photographer => photographer.id == id);
-    const $photographerHeader = document.querySelector('.photographer-page__header')
-    const template = new Photographer(photographer);
-    $photographerHeader.innerHTML += template.userHeader
-    const galery = media.filter(media => media.photographerId == id)
+    const selectedPhotographerData =  photographers.find(photographer => photographer.id == id);
+    const $photographerHeader = document.querySelector('.photographer-page__header');
+    $photographerHeader.innerHTML += new Photographer(selectedPhotographerData).userHeader
+    const mediaGallery = media.filter(media => media.photographerId == id)
     const $elementGalery = document.querySelector('.photographer-page__gallery')
-    galery.forEach(image => {
-        $elementGalery.innerHTML += `<img class="photographer-page__gallery__photography" src='../assets/medias/${photographer.name}/${image.image}'>`
-    }); 
+    mediaGallery.forEach(media => {
+        let medias = new MediaFactory(media)
+        $elementGalery.innerHTML += medias.createHtml()
+    } );
 }
 
 const main = async () => {

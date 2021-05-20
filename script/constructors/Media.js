@@ -1,33 +1,68 @@
-class Media {
- constructor(data){
-  this.id = id;
-  this.image = data.image;
-  this.video = data.video;
-  this.imgAlt = data.imgAlt;
-  this.likes = data.likes;
-  this.date = data.date;
-  this.price = data.price;
- }
- 
+class MediaFactory {
+    constructor(data) {
+
+        console.log("====")
+        console.log(data)
+        console.log("====")
+        
+        if (data.type === 'image') {
+            return new Photography(data)
+        } else if (data.type === 'video') {
+            return new Video(data)
+        } else {
+            throw 'Unknown Media Type'
+        }
+    }
 }
 
-class Photography extends Media {
- createHTML() {
-  let elementPhotography = document.createElement('img');
-  elementPhotography.setAttribute('src', this.image);
-  elementPhotography.setAttribute('alt', this.alt);
-  elementPhotography.setAttribute('role', 'button');
-  elementPhotography.className = 'photographer-page__gallery__photography';
-  return eltImage;
+class Photography {
+    constructor(data) {
+        this._imgSrc = data.image
+        this._imgAlt = data.description
+        this._imgTitle = data.title
+        this._imgPhotographerId = data.photographerId
+        this._imgLikes = data.likes
+    }
+
+    createHtml() {
+        return `
+        <div>
+            <img class="photographer-page__gallery__media" loading="lazy" src="../assets/medias/${this._imgPhotographerId}/${this._imgSrc}" alt="${this._imgAlt}" />
+            <footer class="photographer-page__gallery__media__footer">
+                <p>${this._imgTitle}</p>
+                <div class="photographer-page__gallery__media__footer__like-section">
+                    <p class="photographer-page__gallery__media__footer__like-section-counter">${this._imgLikes}</p>
+                    <button  class="photographer-page__gallery__media__footer__like-section-button">Like</button>
+                </div>
+            </footer>
+        </div>
+        `
+    }
 }
 
-get createElement() {
- return `
- <img class="photographer-page__gallery__photography" src='../assets/medias/${photographer.name}/${image.image}'>`
+class Video {
+    constructor(data) {
+        this._videoSrc = data.video
+        this._videoTitle = data.title
+        this._videoPhotographerId = data.photographerId
+        this._videoLikes = data.likes
+    }
+
+    createHtml() {
+        return `
+            <video controls class="photographer-page__gallery__media">
+                <source src="../assets/medias/${this._videoPhotographerId}/${this._videoSrc}" />
+            </video>
+            <footer class="photographer-page__gallery__media__footer">
+                <p>${this._videoTitle}</p>
+                <div class="photographer-page__gallery__media__footer__like-section">
+                    <p class="photographer-page__gallery__media__footer__like-section-counter">${this._videoLikes}</p>
+                    <button  class="photographer-page__gallery__media__footer__like-section-button">Like</button>
+                </div>
+            </footer>
+        `
+    }
 }
 
-}
 
-class Video extends Media {
 
-}
