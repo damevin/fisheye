@@ -3,6 +3,7 @@
  * @async 
  * @function displayPhotographerData
  * 
+ * 
  */
 async function displayPhotographerData() {
     const { media, photographers } = await getData()
@@ -12,6 +13,7 @@ async function displayPhotographerData() {
     $photographerHeader.innerHTML += new Photographer(selectedPhotographerData).userHeader
     const mediaGallery = media.filter(media => media.photographerId == id)
     const $elementGalery = document.querySelector('.photographer-page__gallery')
+    console.log(mediaGallery)
     mediaGallery.forEach(media => {
         let medias = new MediaFactory(media)
         $elementGalery.innerHTML += medias.createHtml()
