@@ -53,12 +53,12 @@
 		
 		<!-- TO DO : Faire la style du bouton -->
 		<button id="photographer-page__contact__button">Contact me</button>
-		<label for="pet-select">Trier par</label>
-		<select name="find-by" id="dropdownMenu" onchange="reloadFilters(this)">
-			<option value="popularity" id="findByPopularity">Popularité</option>
-			<option value="date" id="findByDate">Date</option>
-			<option value="title" id="findByTitle">Titre</option>
-		</select>
+		<select id="dropdownMenu">
+			<option value="">Pick One</option>
+			<option value="popularity">Popularité</option>
+			<option value="date">Date</option>
+			<option value="title">Titre</option>
+	</select>
 		<div class="photographer-page__gallery"></div>
 	</main>
 	<!-- Modal de contact du photographe -->
@@ -114,7 +114,7 @@
 	<script src="/script/constructors/Photographer.js"></script>
 	<script src="/script/constructors/Media.js"></script>
 	<script src="/script/utils/lightbox.js"></script>
-	<script src="/script/pages/photographerPage.js"></script>
+	<script src="/script/pages/photographerPage2.js"></script>
 	<script src="/script/utils/contactForm.js"></script>
 	<script src="/script/research/dropdown.js"></script>
 </body>

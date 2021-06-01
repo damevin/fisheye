@@ -1,10 +1,5 @@
 class MediaFactory {
-    constructor(data) {
-
-        console.log("====")
-        console.log(data)
-        console.log("====")
-        
+    constructor(data) {        
         if (data.type === 'image') {
             return new Photography(data)
         } else if (data.type === 'video') {
