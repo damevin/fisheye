@@ -14,7 +14,7 @@
 		align-items: flex-start;
 		display: flex;
 		justify-content: space-between;
-		margin-top: 1.5rem;
+		margin-top: 2.5rem;
 		&__content {
 			&__title {
 				color: $flamepea;
@@ -40,7 +40,7 @@
 			}
 			&__tags {
 				border-radius: 12px;
-				border: 1px solid #C4C4C4;
+				border: 1px solid #c4c4c4;
 				color: $oldbrick;
 				margin-right: 10px;
 				margin-top: 10px;
@@ -76,6 +76,73 @@
 						text-indent: -3000px;
 						width: 2rem;
 					}
+				}
+			}
+		}
+	}
+	&__contact {
+		&__button {
+			background-color: $oldbrick;
+			border-radius: 5px;
+			border: none;
+			bottom: 3.69%;
+			color: white;
+			cursor: pointer;
+			font-size: 23,44px;
+			left: 27.47%;
+			position: fixed;
+			right: 27.2%;
+			top: 92%;
+			width: 170px;
+		}
+	}
+}
+
+// Large devices (desktops, 992px and up)
+@media (min-width: 992px) {
+	.photographer-page {
+		&__layout {
+			border: 1px solid pink;
+		}
+		&__header {
+			background-color: #fafafa;
+			border-radius: 5px;
+			display: grid;
+			grid-template-columns: 1fr 1fr 1fr;
+			margin-top: 3rem;
+			padding: 3rem 2rem;
+			&__content {
+				&__title {
+					font-size: 64px;
+					line-height: 4rem;
+					margin: 0rem;
+				}
+				&__localization {
+					font-size: 24px;
+					font-weight: bold;
+					margin: 1rem 0.2rem;
+				}
+				&__tagline {
+					color: #525252;
+					font-size: 18px;
+					margin: 0 0.2rem;
+				}
+			}
+			&__photo {
+				justify-self: end;
+				margin-right: 2rem;
+				height: 200px;
+				max-width: 200px;
+				min-width: 200px;
+				object-fit: cover;
+			}
+		}
+		&__contact {
+			&__button {
+				position: relative;
+
+				&:focus {
+					border: 2px solid $flamepea;
 				}
 			}
 		}
