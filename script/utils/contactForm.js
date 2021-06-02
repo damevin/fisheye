@@ -2,7 +2,6 @@
  * DOM elements
  */
 async function displayPhotographerModale() {
-  await displayPhotographerData()
 	const modal = document.getElementById("contact__modal");
 	const btn = document.querySelector(".photographer-page__contact__button");
 	const span = document.getElementsByClassName("close")[0];
@@ -11,6 +10,8 @@ async function displayPhotographerModale() {
 	const emailInput = document.getElementById("email");
 	const messageInput = document.getElementById("message");
 	const submitButton = document.getElementById("form-submit-button");
+
+  
 	/**
 	 * Display the modal when the user click on the button
 	 * @return {string}
@@ -36,6 +37,11 @@ async function displayPhotographerModale() {
 		}
 	};
 
+  document.body.addEventListener('keypress', function(e) {
+    if (e.key == "Escape") {
+      modal.style.display = "none";
+    }
+  });
 	/**
 	 * Send form with inputs values in the console
 	 */
