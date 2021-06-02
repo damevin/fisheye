@@ -16,33 +16,30 @@ async function displayPhotographerData() {
 	const mediaGallery = media.filter(
 		(media) => media.photographerId == identifier
 	);
- updateMediaGallery(mediaGallery)
-	document.addEventListener(
-		"change",
-		function (event) {
-			$elementGallery.innerHTML = "";
-			switch (event.target.value) {
-				case "popularity":
-					mediaGallery.sort((a, b) => {
-						return b.likes - a.likes;
-					});
-					updateMediaGallery(mediaGallery);
-					break;
-				case "date":
-					mediaGallery.sort((a, b) => {
-						return new Date(b.date) - new Date(a.date);
-					});
-					updateMediaGallery(mediaGallery);
-					break;
-				case "title":
-					mediaGallery.sort((a, b) => a.title.localeCompare(b.title));
-					updateMediaGallery(mediaGallery);
-					break;
-     default: 
-     updateMediaGallery(mediaGallery);
-			}
-		},
-	);
+	updateMediaGallery(mediaGallery);
+	document.addEventListener("change", function (event) {
+		$elementGallery.innerHTML = "";
+		switch (event.target.value) {
+			case "popularity":
+				mediaGallery.sort((a, b) => {
+					return b.likes - a.likes;
+				});
+				updateMediaGallery(mediaGallery);
+				break;
+			case "date":
+				mediaGallery.sort((a, b) => {
+					return new Date(b.date) - new Date(a.date);
+				});
+				updateMediaGallery(mediaGallery);
+				break;
+			case "title":
+				mediaGallery.sort((a, b) => a.title.localeCompare(b.title));
+				updateMediaGallery(mediaGallery);
+				break;
+			default:
+				updateMediaGallery(mediaGallery);
+		}
+	});
 }
 
 function updateMediaGallery(gallery) {

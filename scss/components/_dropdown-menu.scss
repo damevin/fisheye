@@ -1,0 +1,14 @@
+option {
+ background-color: red;
+}
+
+select {
+ background-color: $oldbrick;
+ border: none;
+ border-radius: 5px;
+ color: white;
+ font-size: 18px;
+ height: 59px;
+ padding: 0.2rem;
+ width: 170px;
+}

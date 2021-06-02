@@ -276,6 +276,21 @@
   }
 }
 
+option {
+  background-color: red;
+}
+
+select {
+  background-color: #901c1c;
+  border: none;
+  border-radius: 5px;
+  color: white;
+  font-size: 18px;
+  height: 59px;
+  padding: 0.2rem;
+  width: 170px;
+}
+
 body {
   padding: 40px 10px;
   font-family: "DM Sans", sans-serif;
@@ -379,6 +394,7 @@ body {
   align-items: center;
   display: flex;
   flex-direction: column;
+  margin-top: 2rem;
 }
 
 .photographer-page__logo {
@@ -485,9 +501,13 @@ body {
   width: 170px;
 }
 
+.photographer-page__dropdown {
+  display: none;
+}
+
 @media (min-width: 992px) {
-  .photographer-page__layout {
-    border: 1px solid pink;
+  .photographer-page {
+    display: inline;
   }
   .photographer-page__header {
     background-color: #fafafa;
@@ -520,11 +540,31 @@ body {
     min-width: 200px;
     object-fit: cover;
   }
+  .photographer-page__gallery {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 2rem;
+    margin-top: 3rem;
+  }
+  .photographer-page__gallery__card {
+    width: 100%;
+    height: 350px;
+  }
+  .photographer-page__gallery__media {
+    height: 300px;
+    width: 100%;
+    object-fit: cover;
+  }
   .photographer-page__contact__button {
-    position: relative;
+    position: initial;
+    height: 50px;
   }
   .photographer-page__contact__button:focus {
     border: 2px solid #d3573c;
+  }
+  .photographer-page__dropdown {
+    display: inline;
+    margin-bottom: 3rem;
   }
 }
 

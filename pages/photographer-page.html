@@ -45,16 +45,16 @@
 	</a>
 	<header class="photographer-page__header-section" role="banner"></header>
 	<main class="photographer-page">
-		<!-- TO DO : Faire la style du bouton -->
+		<div class="photographer-page__dropdown">
 		<label for="dropdownMenu">Trier par</label>
-		<select id="dropdownMenu">
-			<option value="popularity">Popularité</option>
-			<option value="date">Date</option>
-			<option value="title">Titre</option>
+		<select id="dropdownMenu" class="photographer-page__dropdown-menu">
+			<option value="popularity" class="photographer-page__dropdown-menu-item">Popularité</option>
+			<option value="date" class="photographer-page__dropdown-menu-item">Date</option>
+			<option value="title" class="photographer-page__dropdown-menu-item">Titre</option>
 		</select>
+	</div>
 		<div class="photographer-page__gallery"></div>
 	</main>
-	<!-- Modal de contact du photographe -->
 	<div id="contact__modal" class="modal">
 		<div class="modal-content">
 			<header class="modal-header">
