@@ -8,7 +8,7 @@ async function displayPhotographerData() {
 		(photographer) => photographer.id == identifier
 	);
 	const $photographerHeader = document.querySelector(
-		".photographer-page__header"
+		".photographer-page__header-section"
 	);
 	$photographerHeader.innerHTML += new Photographer(
 		selectedPhotographerData
