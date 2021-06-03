@@ -7,15 +7,9 @@ async function displayPhotographerData() {
 	const selectedPhotographerData = photographers.find(
 		(photographer) => photographer.id == identifier
 	);
-	const $photographerHeader = document.querySelector(
-		".photographer-page__header-section"
-	);
-	$photographerHeader.innerHTML += new Photographer(
-		selectedPhotographerData
-	).userHeader;
-	const mediaGallery = media.filter(
-		(media) => media.photographerId == identifier
-	);
+	const mediaGallery = media.filter((media) => media.photographerId == identifier);
+	const $photographerHeader = document.querySelector(".photographer-page__header-section");
+	$photographerHeader.innerHTML += new Photographer(selectedPhotographerData).userHeader;
 	updateMediaGallery(mediaGallery);
 	document.addEventListener("change", function (event) {
 		$elementGallery.innerHTML = "";
@@ -42,14 +36,25 @@ async function displayPhotographerData() {
 	});
 }
 
+
 function updateMediaGallery(gallery) {
-	gallery.forEach((media) => {
-		let medias = new MediaFactory(media);
-		$elementGallery.innerHTML += medias.createHtml();
+	gallery.forEach((data) => {
+		let media = new MediaFactory(data);
+		$elementGallery.innerHTML += media.createHtml();
+  let mediaLikes = document.getElementById(`${media._id}`)
+		mediaLikes.addEventListener('click', function() {
+			console.log("-----")
+		}, false)
+		console.log(mediaLikes)
+		console.log(media._id)
 	});
 }
 
-function getUrlParams() {}
+function like() {
+	console.log("=======")
+	console.log("Etape suivante")
+	console.log("=======")
+}
 
 const main = async () => {
 	await displayPhotographerData();
