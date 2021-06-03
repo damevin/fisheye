@@ -1,5 +1,7 @@
 # FishEye - Photographers accessible plateform
 
+[![Netlify Status](https://api.netlify.com/api/v1/badges/aa789e69-9041-4891-97fc-47267cbc3338/deploy-status)](https://app.netlify.com/sites/musing-goodall-5089ae/deploys)
+
 ## A propos
 
 Projet n°7 réalisé dans le cadre du diplôme developpeur front-end de l'école OpenClassRooms
