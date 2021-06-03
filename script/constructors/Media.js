@@ -21,8 +21,8 @@ class Photography {
 
     createHtml() {
         return `
-        <div class="photographer-page__gallery__card">
-            <img class="photographer-page__gallery__media" loading="lazy" src="../assets/medias/${this._imgPhotographerId}/${this._imgSrc}" alt="${this._imgAlt}" />
+        <a class="photographer-page__gallery__card" tabindex="-1">
+            <img class="photographer-page__gallery__media" loading="lazy" tab-index="-1" src="../assets/medias/${this._imgPhotographerId}/${this._imgSrc}" alt="${this._imgAlt}" />
             <footer class="photographer-page__gallery__media__footer">
                 <p>${this._imgTitle}</p>
                 <div class="photographer-page__gallery__media__footer__like-section">
@@ -30,7 +30,7 @@ class Photography {
                     <button class="photographer-page__gallery__media__footer__like-section-button">Like</button>
                 </div>
             </footer>
-        </div>
+        </a>
         `
     }
 }
@@ -45,7 +45,7 @@ class Video {
 
     createHtml() {
         return `
-        <div class="photographer-page__gallery__card">
+        <a class="photographer-page__gallery__card" tabindex="-1">
             <video controls class="photographer-page__gallery__media">
                 <source src="../assets/medias/${this._videoPhotographerId}/${this._videoSrc}" />
             </video>
@@ -56,7 +56,7 @@ class Video {
                     <button  class="photographer-page__gallery__media__footer__like-section-button">Like</button>
                 </div>
             </footer>
-        </div>
+        </a>
         `
     }
 }
