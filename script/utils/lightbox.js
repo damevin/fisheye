@@ -1,15 +1,15 @@
 /**
- * @property {HTMLElement} element
- * @property {string[]} gallery
- * @property {string} src image affichée
+	* Lightbox for show photographers medias
+ * @constant {HTMLElement} gallerySection - Get elements in gallery
+ * @constant {string []} links - Get all elements who contains img and video
+	* @constant {string []} gallery - Get attributes src of all medias
  */
 class Lightbox {
 	static init() {
 		const gallerySection = document.querySelector(".photographer-page__gallery");
 		const links = Array.from(gallerySection.querySelectorAll('img[src$=".jpg"],source[src$=".mp4"]'));
-		console.log(links);
 		const gallery = links.map((link) => link.getAttribute("src"));
-		console.log(gallery);
+		console.log(gallery)
 		links.forEach((link) =>
 			link.addEventListener("click", (e) => {
 				e.preventDefault();
@@ -21,7 +21,8 @@ class Lightbox {
 	/**
 	 *
 	 * @param {string} url Media URL
-	 * @param {string[]} gallery Tableau d'url des médias
+	 * @param {string[]} gallery Array of medaid
+		* @param {string} alt Alt media text
 	 */
 	constructor(url, gallery, alt) {
 		this.element = this.buildDOM(url, alt);
@@ -33,7 +34,8 @@ class Lightbox {
 	}
 
 	/**
-	 * @param {*string} url Media URL
+	 * @param {string} url Media URL
+		* @param {string} alt Media alt text
 	 */
 	loadMedia(url, alt) {
 		this.url = url;
@@ -63,6 +65,11 @@ class Lightbox {
 		}
 	}
 
+	/**
+		* Return a formated title based on media src
+		* @param {string} path 
+		* @returns {string} formatedTitle - 
+		*/
 	getFormatedTitle(path) {
 		const splitedPath = path.split("/");
 		const string = splitedPath[splitedPath.length - 1].split(".")[0];
@@ -84,7 +91,7 @@ class Lightbox {
 	}
 
 	/**
-	 * Ferme la modal
+	 * Close modal
 	 * @param {MouseEvent | KeyboardEvent} e
 	 */
 	close(e) {
@@ -97,7 +104,7 @@ class Lightbox {
 	}
 
 	/**
-	 * Navigue vers l'image suivante
+	 * Switch to the next media
 	 * @param {MouseEvent | KeyboardEvent} e
 	 */
 	next(e) {
@@ -110,7 +117,7 @@ class Lightbox {
 	}
 
 	/**
-	 * Navigue vers l'image précédente
+	 * Switch to the previous media
 	 * @param {MouseEvent | KeyboardEvent} e
 	 */
 	previous(e) {
