@@ -1,5 +1,25 @@
 const $elementGallery = document.querySelector(".photographer-page__gallery");
 
+
+const filterByOption = (mediaGallery, option) => {
+	switch (option) {
+		case "popularity":
+			return mediaGallery.sort((a, b) => {
+				return b.likes - a.likes;
+			});
+		case "date":
+			return mediaGallery.sort((a, b) => {
+				return new Date(b.date) - new Date(a.date);
+			});
+		case "title":
+			return mediaGallery.sort((a, b) => a.title.localeCompare(b.title));
+		default:
+			return mediaGallery.sort((a, b) => {
+				return b.likes - a.likes;
+			});
+	}
+}
+
 async function displayPhotographerData() {
 	const { media, photographers } = await getData();
 	const params = new URLSearchParams(document.location.search.substring(1));
@@ -19,26 +39,10 @@ async function displayPhotographerData() {
 	updateMediaGallery(mediaGallery);
 	document.addEventListener("change", function (event) {
 		$elementGallery.innerHTML = "";
-		switch (event.target.value) {
-			case "popularity":
-				mediaGallery.sort((a, b) => {
-					return b.likes - a.likes;
-				});
-				updateMediaGallery(mediaGallery);
-				break;
-			case "date":
-				mediaGallery.sort((a, b) => {
-					return new Date(b.date) - new Date(a.date);
-				});
-				updateMediaGallery(mediaGallery);
-				break;
-			case "title":
-				mediaGallery.sort((a, b) => a.title.localeCompare(b.title));
-				updateMediaGallery(mediaGallery);
-				break;
-			default:
-				updateMediaGallery(mediaGallery);
-		}
+		
+		const option = filterByOption(mediaGallery, event.target.value)
+		updateMediaGallery(option)
+
 	});
 }
 
