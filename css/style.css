@@ -132,12 +132,17 @@
   text-align: center;
 }
 
+.photographer:focus {
+  border: 1px solid #911c1c;
+}
+
 .photographer__img {
   border-radius: 50%;
   height: 200px;
   object-fit: cover;
   text-decoration: none;
   width: 200px;
+  transition: border 400ms ease-in-out;
 }
 
 .photographer__name {
@@ -466,9 +471,14 @@ body {
 }
 
 .photographer-page__gallery__media {
+  cursor: pointer;
   height: 190px;
   object-fit: cover;
   width: 335px;
+}
+
+.photographer-page__gallery__media:focus {
+  border: 1px solid #911c1c;
 }
 
 .photographer-page__gallery__media__footer {
