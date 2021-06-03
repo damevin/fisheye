@@ -61,9 +61,13 @@
 		display: grid;
 		grid-template-columns: 1fr;
 		&__media {
+			cursor: pointer;
 			height: 190px;
 			object-fit: cover;
 			width: 335px;
+			&:focus {
+				border: 1px solid $oldbrick
+		}
 			&__footer {
 				display: flex;
 				justify-content: space-between;
