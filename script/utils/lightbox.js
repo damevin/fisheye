@@ -5,10 +5,11 @@
  */
 class Lightbox {
 	static init() {
-		const links = Array.from(
-			document.querySelectorAll(".photographer-page__gallery__media", "img", "video")
-		);
+		const gallerySection = document.querySelector(".photographer-page__gallery");
+		const links = Array.from(gallerySection.querySelectorAll('img[src$=".jpg"],source[src$=".mp4"]'));
+		console.log(links);
 		const gallery = links.map((link) => link.getAttribute("src"));
+		console.log(gallery);
 		links.forEach((link) =>
 			link.addEventListener("click", (e) => {
 				e.preventDefault();
@@ -25,7 +26,7 @@ class Lightbox {
 	constructor(url, gallery, alt) {
 		this.element = this.buildDOM(url, alt);
 		this.gallery = gallery;
-		this.loadMedia(url);
+		this.loadMedia(url, alt);
 		this.onKeyUp = this.onKeyUp.bind(this);
 		document.body.appendChild(this.element);
 		document.addEventListener("keyup", this.onKeyUp);
@@ -35,28 +36,37 @@ class Lightbox {
 	 * @param {*string} url Media URL
 	 */
 	loadMedia(url, alt) {
-		this.url = null;
-		this.alt = null;
-		const image = new Image();
-		const container = this.element.querySelector(".lightbox__container");
-		const loader = document.createElement("div");
-		loader.classList.add("lightbox__loader");
-		container.innerHTML = "";
-		container.appendChild(loader);
-		image.onload = () => {
-			container.removeChild(loader);
+		this.url = url;
+		this.alt = alt;
+		if (url.endsWith(".mp4")) {
+			const video = document.createElement("video");
+			const container = this.element.querySelector(".lightbox__container");
+			const legend = document.createElement("p");
+			legend.innerHTML += this.getFormatedTitle(url);
+			container.innerHTML = "";
+			container.appendChild(video);
+			container.appendChild(legend);
+			video.setAttribute("width", "100%");
+			video.setAttribute("height", "100%");
+			video.setAttribute("controls", "");
+			video.src = url;
+		} else if (url.endsWith(".jpg")) {
+			const image = new Image();
+			const container = this.element.querySelector(".lightbox__container");
+			const legend = document.createElement("p");
+			legend.innerHTML += this.getFormatedTitle(url);
+			container.innerHTML = "";
 			container.appendChild(image);
-			this.url = url;
-			this.alt = alt;
-		};
-		image.alt = this.getFormatedTitle(url);
-		image.src = url;
+			container.appendChild(legend);
+			image.alt = this.getFormatedTitle(url);
+			image.src = url;
+		}
 	}
 
 	getFormatedTitle(path) {
-		const EXPR_IMG_TITLE = /^.+\/([^/]+)\.[a-z]{3,4}$/i;
-		const string = path.match(EXPR_IMG_TITLE)[1] || path;
-		const formatedTitle = string.replace("_", " ");
+		const splitedPath = path.split("/");
+		const string = splitedPath[splitedPath.length - 1].split(".")[0];
+		const formatedTitle = string.replaceAll("_", " ");
 		return formatedTitle;
 	}
 
