@@ -150,7 +150,7 @@
 }
 
 .photographer__localization {
-  color: #901c1c;
+  color: #911c1c;
   font-size: 13px;
   line-height: 16.93px;
   margin: 0;
@@ -176,13 +176,13 @@
 
 .photographer__tag {
   border-radius: 11px;
-  border: 1px solid #C4C4C4;
-  color: #901c1c;
+  border: 1px solid #c4c4c4;
+  color: #911c1c;
   padding: 0rem 0.5rem;
 }
 
 .lightbox {
-  animation: lightboxIn .5s;
+  animation: lightboxIn 0.5s;
   background-color: rgba(255, 253, 253, 0.9);
   height: 100%;
   left: 0;
@@ -193,17 +193,20 @@
 }
 
 .lightbox__container {
-  align-items: center;
   display: flex;
+  flex-direction: column;
+  align-items: center;
   justify-content: center;
   margin-left: 50px;
   margin-right: 50px;
   min-height: 100vh;
   padding: 0rem;
+  text-align: center;
+  color: #911c1c;
 }
 
 .lightbox__container img {
-  animation: lightboxIn .5s;
+  animation: lightboxIn 0.5s;
   height: auto;
   max-width: 70%;
 }
@@ -246,9 +249,9 @@
 
 .lightbox button {
   cursor: pointer;
-  opacity: .7;
+  opacity: 0.7;
   text-indent: -10000px;
-  transition: opacity .3s;
+  transition: opacity 0.3s;
 }
 
 .lightbox button:hover {
@@ -258,13 +261,13 @@
 .lightbox__loader {
   width: 40px;
   height: 40px;
-  opacity: .4;
+  opacity: 0.4;
   background: url(../assets/icons/loader.svg) center center no-repeat;
 }
 
 .lightbox.fadeOut {
   opacity: 0;
-  transition: opacity ease-in-out .6;
+  transition: opacity ease-in-out 0.6;
 }
 
 @keyframes lightboxIn {
@@ -281,7 +284,7 @@ option {
 }
 
 select {
-  background-color: #901c1c;
+  background-color: #911c1c;
   border: none;
   border-radius: 5px;
   color: white;
@@ -311,7 +314,7 @@ body {
 }
 
 .header__title {
-  color: #901c1c;
+  color: #911c1c;
   font-size: 14px;
   font-weight: 500;
   grid-column: 2;
@@ -332,8 +335,8 @@ body {
 }
 
 .header__filters__navigation__tag {
-  border: 1px solid #C4C4C4;
-  color: #901c1c;
+  border: 1px solid #c4c4c4;
+  color: #911c1c;
   padding: 0rem 0.5rem;
   border-radius: 11px;
   font-size: 14px;
@@ -421,7 +424,7 @@ body {
 }
 
 .photographer-page__header__content__localization {
-  color: #901c1c;
+  color: #911c1c;
   font-size: 14px;
   font-weight: bold;
   margin: 0.5rem 0rem;
@@ -442,7 +445,7 @@ body {
 .photographer-page__header__content__tags {
   border-radius: 12px;
   border: 1px solid #c4c4c4;
-  color: #901c1c;
+  color: #911c1c;
   margin-right: 10px;
   margin-top: 10px;
   padding: 0rem 0.5rem;
@@ -487,7 +490,7 @@ body {
 }
 
 .photographer-page__contact__button {
-  background-color: #901c1c;
+  background-color: #911c1c;
   border-radius: 5px;
   border: none;
   bottom: 3.69%;

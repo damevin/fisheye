@@ -1,14 +1,15 @@
 /**
- * @property {HTMLElement} element
- * @property {string[]} gallery
- * @property {string} src image affichée
+	* Lightbox for show photographers medias
+ * @constant {HTMLElement} gallerySection - Get elements in gallery
+ * @constant {string []} links - Get all elements who contains img and video
+	* @constant {string []} gallery - Get attributes src of all medias
  */
 class Lightbox {
 	static init() {
-		const links = Array.from(
-			document.querySelectorAll(".photographer-page__gallery__media", "img", "video")
-		);
+		const gallerySection = document.querySelector(".photographer-page__gallery");
+		const links = Array.from(gallerySection.querySelectorAll('img[src$=".jpg"],source[src$=".mp4"]'));
 		const gallery = links.map((link) => link.getAttribute("src"));
+		console.log(gallery)
 		links.forEach((link) =>
 			link.addEventListener("click", (e) => {
 				e.preventDefault();
@@ -20,43 +21,59 @@ class Lightbox {
 	/**
 	 *
 	 * @param {string} url Media URL
-	 * @param {string[]} gallery Tableau d'url des médias
+	 * @param {string[]} gallery Array of medaid
+		* @param {string} alt Alt media text
 	 */
 	constructor(url, gallery, alt) {
 		this.element = this.buildDOM(url, alt);
 		this.gallery = gallery;
-		this.loadMedia(url);
+		this.loadMedia(url, alt);
 		this.onKeyUp = this.onKeyUp.bind(this);
 		document.body.appendChild(this.element);
 		document.addEventListener("keyup", this.onKeyUp);
 	}
 
 	/**
-	 * @param {*string} url Media URL
+	 * @param {string} url Media URL
+		* @param {string} alt Media alt text
 	 */
 	loadMedia(url, alt) {
-		this.url = null;
-		this.alt = null;
-		const image = new Image();
-		const container = this.element.querySelector(".lightbox__container");
-		const loader = document.createElement("div");
-		loader.classList.add("lightbox__loader");
-		container.innerHTML = "";
-		container.appendChild(loader);
-		image.onload = () => {
-			container.removeChild(loader);
+		this.url = url;
+		this.alt = alt;
+		if (url.endsWith(".mp4")) {
+			const video = document.createElement("video");
+			const container = this.element.querySelector(".lightbox__container");
+			const legend = document.createElement("p");
+			legend.innerHTML += this.getFormatedTitle(url);
+			container.innerHTML = "";
+			container.appendChild(video);
+			container.appendChild(legend);
+			video.setAttribute("width", "100%");
+			video.setAttribute("height", "100%");
+			video.setAttribute("controls", "");
+			video.src = url;
+		} else if (url.endsWith(".jpg")) {
+			const image = new Image();
+			const container = this.element.querySelector(".lightbox__container");
+			const legend = document.createElement("p");
+			legend.innerHTML += this.getFormatedTitle(url);
+			container.innerHTML = "";
 			container.appendChild(image);
-			this.url = url;
-			this.alt = alt;
-		};
-		image.alt = this.getFormatedTitle(url);
-		image.src = url;
+			container.appendChild(legend);
+			image.alt = this.getFormatedTitle(url);
+			image.src = url;
+		}
 	}
 
+	/**
+		* Return a formated title based on media src
+		* @param {string} path 
+		* @returns {string} formatedTitle - 
+		*/
 	getFormatedTitle(path) {
-		const EXPR_IMG_TITLE = /^.+\/([^/]+)\.[a-z]{3,4}$/i;
-		const string = path.match(EXPR_IMG_TITLE)[1] || path;
-		const formatedTitle = string.replace("_", " ");
+		const splitedPath = path.split("/");
+		const string = splitedPath[splitedPath.length - 1].split(".")[0];
+		const formatedTitle = string.replaceAll("_", " ");
 		return formatedTitle;
 	}
 
@@ -74,7 +91,7 @@ class Lightbox {
 	}
 
 	/**
-	 * Ferme la modal
+	 * Close modal
 	 * @param {MouseEvent | KeyboardEvent} e
 	 */
 	close(e) {
@@ -87,7 +104,7 @@ class Lightbox {
 	}
 
 	/**
-	 * Navigue vers l'image suivante
+	 * Switch to the next media
 	 * @param {MouseEvent | KeyboardEvent} e
 	 */
 	next(e) {
@@ -100,7 +117,7 @@ class Lightbox {
 	}
 
 	/**
-	 * Navigue vers l'image précédente
+	 * Switch to the previous media
 	 * @param {MouseEvent | KeyboardEvent} e
 	 */
 	previous(e) {
