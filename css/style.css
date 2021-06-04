@@ -501,6 +501,10 @@ body {
   justify-content: space-between;
 }
 
+.photographer-page__gallery__media__footer__figcaption {
+  margin-top: 1rem;
+}
+
 .photographer-page__gallery__media__footer__like-section {
   display: flex;
   flex-direction: row;
@@ -510,7 +514,7 @@ body {
   background: url(../../assets/icons/heart.svg) no-repeat center center;
   border: none;
   cursor: pointer;
-  text-indent: -3000px;
+  text-indent: -6000px;
   width: 2rem;
 }
 
