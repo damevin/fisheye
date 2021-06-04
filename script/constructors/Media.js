@@ -21,13 +21,13 @@ class Photography {
 
     createHtml() {
         return `
-        <a class="photographer-page__gallery__card" tabindex="-1">
+        <a class="photographer-page__gallery__card" tabindex="-1" aria-label="${this._imgTitle} closeup view">
             <img class="photographer-page__gallery__media" loading="lazy" tab-index="-1" src="../assets/medias/${this._imgPhotographerId}/${this._imgSrc}" alt="${this._imgAlt}" />
             <footer class="photographer-page__gallery__media__footer">
                 <p>${this._imgTitle}</p>
                 <div class="photographer-page__gallery__media__footer__like-section">
                     <p class="photographer-page__gallery__media__footer__like-section-counter">${this._imgLikes}</p>
-                    <button class="photographer-page__gallery__media__footer__like-section-button">Like</button>
+                    <button class="photographer-page__gallery__media__footer__like-section-button" aria-label="likes">Like</button>
                 </div>
             </footer>
         </a>
