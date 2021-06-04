@@ -17,19 +17,19 @@ figure {
 
 .photographer:focus {
     outline: none;
-    border: .3rem solid $oldbrick;
+    border: 2px solid $oldbrick;
     border-radius: 5px
 }
 
 .focus__element:focus {
     outline: none;
-    border: .3rem dotted     $oldbrick;
+    border: 2px $oldbrick;
     border-radius: 5px
 }
 
 .focus__element-secondary:focus {
     outline: none;
-    border: .3rem dotted $flamepea;
+    border: 2px solid $flamepea;
     border-radius: 5px
 }
 
