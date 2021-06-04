@@ -642,3 +642,9 @@ figure {
   border: 0.3rem solid #911c1c;
   border-radius: 5px;
 }
+
+.focus__element-secondary:focus {
+  outline: none;
+  border: 0.3rem solid #d3573c;
+  border-radius: 5px;
+}

@@ -26,5 +26,9 @@ figure {
     border-radius: 5px
 }
 
-
+.focus__element-secondary:focus {
+    outline: none;
+    border: .3rem solid $flamepea;
+    border-radius: 5px
+}
 
