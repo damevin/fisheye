@@ -186,5 +186,30 @@
 			display: inline;
 			margin-bottom: 3rem;
 		}
+		&__footer {
+			align-items: center;
+			background-color: $newyorkpink;
+			bottom: 0;
+			display: flex;
+			font-size: 24px;
+			height: 69px;
+			justify-content: space-between;
+			padding: 0 2rem;
+			position: fixed;
+			right: 3rem;
+			width: 276px;
+			&__aside {
+				align-items: center;
+				display: flex;
+				&__heart {
+					background: url(../../assets/icons/heart.svg) no-repeat center center;
+					border: none;
+					cursor: pointer;
+					height: 2rem;
+					text-indent: -6000px;
+					width: 2rem;
+				}
+			}
+		}
 	}
 }

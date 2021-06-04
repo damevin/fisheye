@@ -615,6 +615,31 @@ body {
     display: inline;
     margin-bottom: 3rem;
   }
+  .photographer-page__footer {
+    align-items: center;
+    background-color: #DB8876;
+    bottom: 0;
+    display: flex;
+    font-size: 24px;
+    height: 69px;
+    justify-content: space-between;
+    padding: 0 2rem;
+    position: fixed;
+    right: 3rem;
+    width: 276px;
+  }
+  .photographer-page__footer__aside {
+    align-items: center;
+    display: flex;
+  }
+  .photographer-page__footer__aside__heart {
+    background: url(../../assets/icons/heart.svg) no-repeat center center;
+    border: none;
+    cursor: pointer;
+    height: 2rem;
+    text-indent: -6000px;
+    width: 2rem;
+  }
 }
 
 ul {
