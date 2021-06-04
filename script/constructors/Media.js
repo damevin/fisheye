@@ -66,18 +66,18 @@ class Video {
 	 */
 	createHtml() {
 		return `
-        <a class="photographer-page__gallery__card" tabindex="-1">
+        <figure class="photographer-page__gallery__card" tabindex="-1">
             <video controls class="photographer-page__gallery__media">
                 <source src="../assets/medias/${this._videoPhotographerId}/${this._videoSrc}" />
             </video>
             <footer class="photographer-page__gallery__media__footer">
-                <p>${this._videoTitle}</p>
-                <div class="photographer-page__gallery__media__footer__like-section">
+                <figcaption class="photographer-page__gallery__media__footer__figcaption">${this._videoTitle}</figcaption>
+                <aside class="photographer-page__gallery__media__footer__like-section">
                     <p class="photographer-page__gallery__media__footer__like-section-counter">${this._videoLikes}</p>
                     <button  class="photographer-page__gallery__media__footer__like-section-button">Like</button>
-                </div>
+                </aside>
             </footer>
-        </a>
+        </figure>
         `;
 	}
 }
