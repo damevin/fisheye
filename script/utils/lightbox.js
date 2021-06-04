@@ -62,6 +62,7 @@ class Lightbox {
 			container.appendChild(legend);
 			image.alt = this.getFormatedTitle(url);
 			image.src = url;
+			image.classList.add("lightbox__container__img")
 		}
 	}
 
