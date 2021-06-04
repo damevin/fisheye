@@ -495,7 +495,7 @@ body {
   cursor: pointer;
   height: 190px;
   object-fit: cover;
-  width: 335px;
+  width: 100%;
 }
 
 .photographer-page__gallery__media:focus {
