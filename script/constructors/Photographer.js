@@ -38,16 +38,16 @@ class Photographer {
      */
     get userCard() {
         return `
-            <article class="photographer" tabindex="3">
-                <a href="pages/photographer-page.html?id=${this._id}" tabindex="-1">
+            <a href="pages/photographer-page.html?id=${this._id}" tabindex="3" class="focus__element" >
+                <article class="photographer">
                     <img class="photographer__img" src="${this.picture}">
                     <h2 class="photographer__name">${this._name}</h2>
-                </a>
-                <p class="photographer__localization">${this.localization}</p>
-                <p class="photographer__tagline">${this._tagline}</p>
-                <p class="photographer__price">${this._price}€/jour</p>
-                <ul class="photographer__taglist">${this._tags.map(tag => `<li class="photographer__tag">#${tag}</li>`).join('')}</ul>
-            </article>`
+                    <p class="photographer__localization">${this.localization}</p>
+                    <p class="photographer__tagline">${this._tagline}</p>
+                    <p class="photographer__price">${this._price}€/jour</p>
+                    <ul class="photographer__taglist">${this._tags.map(tag => `<li class="photographer__tag">#${tag}</li>`).join('')}</ul>
+                </article>
+            </a>`
     }
 
     /**
@@ -63,7 +63,7 @@ class Photographer {
                 <p class="photographer-page__header__content__tagline">${this._tagline}</p>
                 <ul class="photographer-page__header__content__taglist">${this._tags.map(tag => `<li href="../index.html" class="photographer-page__header__content__tags">#${tag}</li>`).join(" ")}</ul>
             </div>
-            <button class="photographer-page__contact__button" onclick="displayPhotographerModale()" aria-label="Contact me">Contactez-moi
+            <button class="photographer-page__contact__button focus__element-secondary" tabindex="2" onclick="displayPhotographerModale()" aria-label="Contact me">Contactez-moi
             </button>
             <img src="${this.picture}" class="photographer-page__header__photo" alt="${this._name}">
         </div> 

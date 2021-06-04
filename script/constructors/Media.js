@@ -35,12 +35,12 @@ class Photography {
 	createHtml() {
 		return `
         <figure class="photographer-page__gallery__card"  aria-label="${this._imgTitle} closeup view">
-            <img class="photographer-page__gallery__media" loading="lazy" tabindex="0"   src="../assets/medias/${this._imgPhotographerId}/${this._imgSrc}" alt="${this._imgAlt}" />
+            <img class="photographer-page__gallery__media focus__element-secondary" loading="lazy" tabindex="0"   src="../assets/medias/${this._imgPhotographerId}/${this._imgSrc}" alt="${this._imgAlt}" />
             <footer class="photographer-page__gallery__media__footer">
                 <figcaption class="photographer-page__gallery__media__footer__figcaption">${this._imgTitle}</figcaption>
                 <div class="photographer-page__gallery__media__footer__like-section">
                     <p class="photographer-page__gallery__media__footer__like-section-counter">${this._imgLikes}</p>
-                    <button class="photographer-page__gallery__media__footer__like-section-button" tab-index="1" aria-label="likes">Like</button>
+                    <button class="photographer-page__gallery__media__footer__like-section-button focus__element-secondary" tab-index="1" aria-label="likes">Like</button>
                 </div>
             </footer>
         </figure>
@@ -67,14 +67,14 @@ class Video {
 	createHtml() {
 		return `
         <figure class="photographer-page__gallery__card" tabindex="-1">
-            <video controls class="photographer-page__gallery__media">
+            <video controls class="photographer-page__gallery__media focus__element-secondary">
                 <source src="../assets/medias/${this._videoPhotographerId}/${this._videoSrc}" />
             </video>
             <footer class="photographer-page__gallery__media__footer">
                 <figcaption class="photographer-page__gallery__media__footer__figcaption">${this._videoTitle}</figcaption>
                 <aside class="photographer-page__gallery__media__footer__like-section">
                     <p class="photographer-page__gallery__media__footer__like-section-counter">${this._videoLikes}</p>
-                    <button  class="photographer-page__gallery__media__footer__like-section-button">Like</button>
+                    <button  class="photographer-page__gallery__media__footer__like-section-button focus__element-secondary     ">Like</button>
                 </aside>
             </footer>
         </figure>

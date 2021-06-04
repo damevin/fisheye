@@ -37,11 +37,15 @@ async function displayPhotographerModale() {
 		}
 	};
 
-  document.body.addEventListener('keypress', function(e) {
-    if (e.key == "Escape") {
-      modal.style.display = "none";
-    }
-  });
+	/**
+		* Listen if escape keyboard key is pressed, then close the modal
+	 */
+	document.addEventListener('keydown', function(e) {
+		let keyCode = e.key;
+		if (keyCode === "Escape") {
+				modal.style.display = "none";
+		}
+});
 	/**
 	 * Send form with inputs values in the console
 	 */
