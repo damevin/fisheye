@@ -40,7 +40,7 @@ class Photography {
                 <p>${this._imgTitle}</p>
                 <div class="photographer-page__gallery__media__footer__like-section">
                     <p class="photographer-page__gallery__media__footer__like-section-counter">${this._imgLikes}</p>
-                    <button class="photographer-page__gallery__media__footer__like-section-button" id="like-button-${this._imgPhotographerId}" aria-label="likes">Like</button>
+                    <button class="photographer-page__gallery__media__footer__like-section-button" aria-label="likes">Like</button>
                 </div>
             </footer>
         </a>
@@ -74,7 +74,7 @@ class Video {
                 <p>${this._videoTitle}</p>
                 <div class="photographer-page__gallery__media__footer__like-section">
                     <p class="photographer-page__gallery__media__footer__like-section-counter">${this._videoLikes}</p>
-                    <button  class="photographer-page__gallery__media__footer__like-section-button" id="like-button-${this._videoPhotographerId}">Like</button>
+                    <button  class="photographer-page__gallery__media__footer__like-section-button">Like</button>
                 </div>
             </footer>
         </a>
