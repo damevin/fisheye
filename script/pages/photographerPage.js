@@ -34,7 +34,7 @@ const filterByOption = (mediaGallery, option) => {
  * @constant $photographerHeader {HTMLElement} - Get html for place photographer header
  * @constant mediaGallery - Return array of medias, based on photographer identifier
  * @function updateMediaGallery
-	* @event listen when user change select state
+ * @event listen when user change select state
  */
 async function displayPhotographerData() {
 	const { media, photographers } = await getData();
@@ -67,25 +67,26 @@ function updateMediaGallery(gallery) {
 	});
 }
 
-function incrementLikes() {
-	console.log("=====");
-	console.log("next step");
-	console.log("=====");
-}
 
 /**
-	* Function for initialized page
-	*/
+ * Function for initialized page
+ */
 const init = async () => {
 	await displayPhotographerData();
 	Lightbox.init();
 
-	const $likesButtons = document.querySelectorAll(
-		".photographer-page__gallery__media__footer__like-section-button"
+	const $likesSection = document.querySelectorAll(
+		".photographer-page__gallery__media__footer__like-section"
 	);
 
-	$likesButtons.forEach((likeButton) => {
-		likeButton.addEventListener("click", incrementLikes);
+	$likesSection.forEach(function (i) {
+		i.addEventListener("click", function () {
+			let elementCounter = i.querySelector('.photographer-page__gallery__media__footer__like-section-counter')
+			let likeSum = Number(elementCounter.textContent)
+			const liked = i.dataset.liked === "true";
+			i.dataset.liked = !liked;
+			elementCounter.innerHTML = (likeSum + (!liked ? 1 : -1))
+		});
 	});
 };
 
