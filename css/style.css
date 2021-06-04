@@ -524,22 +524,31 @@ body {
   width: 2rem;
 }
 
+.photographer-page__contact {
+  display: flex;
+  justify-content: center;
+}
+
 .photographer-page__contact__button {
   background-color: #911c1c;
   border-radius: 5px;
   border: none;
-  bottom: 3.69%;
+  bottom: 1rem;
   color: white;
   cursor: pointer;
-  font-size: 23, 44px;
-  left: 27.47%;
+  font-size: 23.44px;
+  height: 80px;
+  left: 50%;
+  margin-left: -150px;
   position: fixed;
-  right: 27.2%;
-  top: 92%;
-  width: 170px;
+  width: 300px;
 }
 
 .photographer-page__dropdown {
+  display: none;
+}
+
+.photographer-page__footer {
   display: none;
 }
 
@@ -551,6 +560,9 @@ body {
   .photographer-page__gallery__media {
     height: 300px;
     width: 100%;
+  }
+  __footer {
+    display: none;
   }
 }
 
@@ -582,17 +594,17 @@ body {
     margin: 0 0.2rem;
   }
   .photographer-page__header__photo {
+    height: 200px;
     justify-self: end;
     margin-right: 2rem;
-    height: 200px;
     max-width: 200px;
     min-width: 200px;
     object-fit: cover;
   }
   .photographer-page__gallery {
     display: grid;
-    grid-template-columns: repeat(3, 1fr);
     gap: 2rem;
+    grid-template-columns: repeat(3, 1fr);
     margin-top: 3rem;
   }
   .photographer-page__gallery__card {
@@ -601,12 +613,13 @@ body {
   }
   .photographer-page__gallery__media {
     height: 300px;
-    width: 100%;
     object-fit: cover;
+    width: 100%;
   }
   .photographer-page__contact__button {
-    position: initial;
     height: 50px;
+    margin: 0;
+    position: initial;
   }
   .photographer-page__contact__button:focus {
     border: 2px solid #d3573c;
