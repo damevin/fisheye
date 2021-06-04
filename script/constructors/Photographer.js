@@ -75,12 +75,22 @@ class Photographer {
         return `
         <section class="photographer-page__footer">
             <aside class="photographer-page__footer__aside">
-            <p class="photographer-page__footer__aside__total-likes">34433</p>
-            <button class="photographer-page__footer__aside__heart"></button>
+            <p class="photographer-page__footer__aside__total-likes">${this.userTotalLikes}</p>
+            <i class="fas fa-heart"></i>
             </aside>
             <p class="photographer-page__footer__price">${this._price}€/jour</p>
         </section>
         `
+    }
 
+    get userTotalLikes() {
+        let totalLikes = document.querySelectorAll('.photographer-page__gallery__media__footer__like-section-counter')
+        totalLikes.forEach(like => {
+            let likeCounter = Number(like.textContent)
+            let sum = likeCounter ++
+            return sum
+        })
+        console.log(sum)
+            
     }
 }
