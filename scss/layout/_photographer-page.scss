@@ -106,6 +106,19 @@
 	}
 }
 
+@media (min-width: $mediumdevices) {
+	.photographer-page {
+		&__gallery {
+			grid-template-columns: repeat(2, 1fr);
+			gap: 2rem;
+			&__media {
+				height: 300px;
+				width: 100%
+			}
+		}
+	}
+}
+
 // Large devices (desktops, 992px and up)
 @media (min-width: 992px) {
 	.photographer-page {

@@ -531,6 +531,17 @@ body {
   display: none;
 }
 
+@media (min-width: 768px) {
+  .photographer-page__gallery {
+    grid-template-columns: repeat(2, 1fr);
+    gap: 2rem;
+  }
+  .photographer-page__gallery__media {
+    height: 300px;
+    width: 100%;
+  }
+}
+
 @media (min-width: 992px) {
   .photographer-page {
     display: inline;
