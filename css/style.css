@@ -358,6 +358,12 @@ body {
   font-size: 14px;
 }
 
+.header__filters__navigation__tag:hover {
+  background-color: #911c1c;
+  cursor: pointer;
+  color: white;
+}
+
 @media (min-width: 768px) {
   .header__logo {
     width: 160px;
