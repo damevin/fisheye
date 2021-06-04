@@ -28,6 +28,10 @@ class Photographer {
         return `${this._city}, ${this._country}`
     }
 
+    get updateDocumentTitle() {
+        document.title += ` - ${this._name}`
+    }
+
     /**
      * Create photographer card 
      * @returns {string} - Return user card
