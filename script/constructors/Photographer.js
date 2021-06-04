@@ -58,7 +58,7 @@ class Photographer {
        return  `
        <div class="photographer-page__header">
             <div class="photographer-page__header__content">
-                <h1 role="header" class="photographer-page__header__content__title">${this._name}</h1>
+                <h1 class="photographer-page__header__content__title">${this._name}</h1>
                 <p class="photographer-page__header__content__localization">${this.localization}</p>
                 <p class="photographer-page__header__content__tagline">${this._tagline}</p>
                 <ul class="photographer-page__header__content__taglist">${this._tags.map(tag => `<li href="../index.html" class="photographer-page__header__content__tags">#${tag}</li>`).join(" ")}</ul>
