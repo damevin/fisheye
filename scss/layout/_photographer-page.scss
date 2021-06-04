@@ -77,11 +77,10 @@
 					display: flex;
 					flex-direction: row;
 					&-button {
-						background: url(../../assets/icons/heart.svg) no-repeat center center;
+						background: none;
 						border: none;
-						cursor: pointer;
-						text-indent: -6000px;
-						width: 2rem;
+						color: $oldbrick;
+						font-size: 1.6rem;
 					}
 				}
 			}
