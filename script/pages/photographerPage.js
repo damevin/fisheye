@@ -45,10 +45,6 @@ async function displayPhotographerData() {
 	);
 	const PhotographerConstructor = new Photographer(selectedPhotographerData)
 	PhotographerConstructor.updateDocumentTitle
-	const $photographerHeader = document.querySelector(".photographer-page__header-section");
-	const $photographerFooter = document.querySelector(".photographer-page__footer-section")
-	$photographerHeader.innerHTML += new Photographer(selectedPhotographerData).userHeader;
-	$photographerFooter.innerHTML += new Photographer(selectedPhotographerData).userFooter;
 	
 	const mediaGallery = media.filter((media) => media.photographerId == identifier);
 
@@ -59,6 +55,11 @@ async function displayPhotographerData() {
 		const option = filterByOption(mediaGallery, event.target.value);
 		updateMediaGallery(option);
 	});
+
+	const $photographerHeader = document.querySelector(".photographer-page__header-section");
+	const $photographerFooter = document.querySelector(".photographer-page__footer-section")
+	$photographerHeader.innerHTML += new Photographer(selectedPhotographerData).userHeader;
+	$photographerFooter.innerHTML += new Photographer(selectedPhotographerData).userFooter;
 }
 
 /**
