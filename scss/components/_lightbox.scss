@@ -10,22 +10,26 @@
 }
 
 .lightbox__container {
+	align-items: center;
+	color: $oldbrick;
 	display: flex;
 	flex-direction: column;
-	align-items: center;
 	justify-content: center;
 	margin-left: 50px;
 	margin-right: 50px;
 	min-height: 100vh;
 	padding: 0rem;
 	text-align: center;
-	color: $oldbrick;
 }
 
-.lightbox__container img {
-	animation: lightboxIn 0.5s;
-	height: auto;
-	max-width: 70%;
+.lightbox__container {
+	img,
+	video {
+		animation: lightboxIn 0.5s;
+		width: 400px;
+		height: 300px;
+		object-fit: cover;
+	}
 }
 
 .lightbox__next,
@@ -55,12 +59,12 @@
 
 .lightbox__close {
 	background: url(../assets/icons/cross.svg) center center / 100% 100% no-repeat;
-	position: fixed;
 	border: none;
 	height: 40px;
-	width: 40px;
-	top: 20px;
+	position: fixed;
 	right: 20px;
+	top: 20px;
+	width: 40px;
 	z-index: 12;
 }
 
@@ -76,10 +80,10 @@
 }
 
 .lightbox__loader {
-	width: 40px;
+	background: url(../assets/icons/loader.svg) center center no-repeat;
 	height: 40px;
 	opacity: 0.4;
-	background: url(../assets/icons/loader.svg) center center no-repeat;
+	width: 40px;
 }
 
 .lightbox.fadeOut {
@@ -93,5 +97,26 @@
 	}
 	to {
 		opacity: 1;
+	}
+}
+
+// Large devices (desktops, 992px and up)
+@media (min-width: $mediumdevices) {
+	.lightbox__container {
+		img,
+		video {
+			height: 700px;
+			width: 800px;
+		}
+	}
+}
+
+@media (min-width: $largedevices) {
+	.lightbox__container {
+		img,
+		video {
+			height: 750px;
+			width: 1000px;
+		}
 	}
 }
