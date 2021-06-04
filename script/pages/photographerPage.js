@@ -43,6 +43,8 @@ async function displayPhotographerData() {
 	const selectedPhotographerData = photographers.find(
 		(photographer) => photographer.id == identifier
 	);
+	const PhotographerConstructor = new Photographer(selectedPhotographerData)
+	PhotographerConstructor.updateDocumentTitle
 	const $photographerHeader = document.querySelector(".photographer-page__header-section");
 	$photographerHeader.innerHTML += new Photographer(selectedPhotographerData).userHeader;
 	const mediaGallery = media.filter((media) => media.photographerId == identifier);

@@ -1,41 +1,49 @@
 /**
-	* Lightbox for show photographers medias
+ * Lightbox for show photographers medias
  * @constant {HTMLElement} gallerySection - Get elements in gallery
  * @constant {string []} links - Get all elements who contains img and video
-	* @constant {string []} gallery - Get attributes src of all medias
+ * @constant {string []} gallery - Get attributes src of all medias
  */
 class Lightbox {
 	static init() {
 		const gallerySection = document.querySelector(".photographer-page__gallery");
 		const links = Array.from(gallerySection.querySelectorAll('img[src$=".jpg"],source[src$=".mp4"]'));
 		const gallery = links.map((link) => link.getAttribute("src"));
-		console.log(gallery)
-		links.forEach((link) =>
+		links.forEach(link => {
 			link.addEventListener("click", (e) => {
 				e.preventDefault();
 				new Lightbox(e.currentTarget.getAttribute("src"), gallery);
-			})
-		);
+			});
+		});
 	}
 
 	/**
 	 *
 	 * @param {string} url Media URL
 	 * @param {string[]} gallery Array of medaid
-		* @param {string} alt Alt media text
+	 * @param {string} alt Alt media text
 	 */
 	constructor(url, gallery, alt) {
 		this.element = this.buildDOM(url, alt);
 		this.gallery = gallery;
 		this.loadMedia(url, alt);
+		this.formatSrcForMediaLightbox(url)
 		this.onKeyUp = this.onKeyUp.bind(this);
 		document.body.appendChild(this.element);
 		document.addEventListener("keyup", this.onKeyUp);
 	}
 
+
+	formatSrcForMediaLightbox(src){
+		let lightboxMediaLink = src.split('/')
+		lightboxMediaLink.splice(4, 0, "lightbox")
+		const formatedLightboxMediaLink = lightboxMediaLink.join("/")
+		return formatedLightboxMediaLink
+	}
+
 	/**
 	 * @param {string} url Media URL
-		* @param {string} alt Media alt text
+	 * @param {string} alt Media alt text
 	 */
 	loadMedia(url, alt) {
 		this.url = url;
@@ -59,16 +67,16 @@ class Lightbox {
 			container.appendChild(image);
 			container.appendChild(legend);
 			image.alt = this.getFormatedTitle(url);
-			image.src = url;
-			image.classList.add("lightbox__container__img")
+			image.src = this.formatSrcForMediaLightbox(url);
+			image.classList.add("lightbox__container__img");
 		}
 	}
 
 	/**
-		* Return a formated title based on media src
-		* @param {string} path 
-		* @returns {string} formatedTitle - 
-		*/
+	 * Return a formated title based on media src
+	 * @param {string} path
+	 * @returns {string} formatedTitle -
+	 */
 	getFormatedTitle(path) {
 		const splitedPath = path.split("/");
 		const string = splitedPath[splitedPath.length - 1].split(".")[0];
