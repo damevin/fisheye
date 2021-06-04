@@ -639,12 +639,12 @@ figure {
 
 .focus__element:focus {
   outline: none;
-  border: 0.3rem solid #911c1c;
+  border: 0.3rem dotted #911c1c;
   border-radius: 5px;
 }
 
 .focus__element-secondary:focus {
   outline: none;
-  border: 0.3rem solid #d3573c;
+  border: 0.3rem dotted #d3573c;
   border-radius: 5px;
 }

@@ -22,13 +22,13 @@ figure {
 
 .focus__element:focus {
     outline: none;
-    border: .3rem solid $oldbrick;
+    border: .3rem dotted     $oldbrick;
     border-radius: 5px
 }
 
 .focus__element-secondary:focus {
     outline: none;
-    border: .3rem solid $flamepea;
+    border: .3rem dotted $flamepea;
     border-radius: 5px
 }
 
