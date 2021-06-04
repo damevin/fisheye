@@ -297,18 +297,16 @@
   }
 }
 
-option {
-  background-color: red;
-}
-
 select {
+  -moz-appearance: none;
   background-color: #911c1c;
-  border: none;
   border-radius: 5px;
+  border: none;
   color: white;
   font-size: 18px;
   height: 59px;
   padding: 0.2rem;
+  margin-top: 2rem;
   width: 170px;
 }
 
@@ -407,7 +405,6 @@ body {
 @media (min-width: 1200px) {
   .photographer__section {
     margin: auto;
-    max-width: 1200px;
   }
 }
 
