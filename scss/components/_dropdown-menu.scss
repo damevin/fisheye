@@ -1,14 +1,12 @@
-option {
- background-color: red;
-}
-
 select {
+ -moz-appearance: none;
  background-color: $oldbrick;
- border: none;
  border-radius: 5px;
+ border: none;
  color: white;
  font-size: 18px;
  height: 59px;
  padding: 0.2rem;
+ margin-top: 2rem;
  width: 170px;
 }
