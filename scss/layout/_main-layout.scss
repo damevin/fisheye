@@ -36,6 +36,11 @@ body {
 				padding: 0rem 0.5rem;
 				border-radius: 11px;
 				font-size: 14px;
+				&:hover {
+					background-color: $oldbrick;
+					cursor: pointer;
+					color: white;
+				}
 			}
 		}
 	}
