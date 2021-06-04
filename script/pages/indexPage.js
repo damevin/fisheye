@@ -20,7 +20,7 @@ const $tags = $filterList.querySelectorAll("li");
 
 function reloadSearch() {
 	$tags.forEach((tag) => {
-console.log("tedededst")
+  console.log("tedededst")
 		tag.addEventListener("click", function () {
 			console.log(tag.textContent);
       displayData(photographers[0])
