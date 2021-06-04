@@ -70,4 +70,17 @@ class Photographer {
         `
     }
 
+
+    get userFooter() {
+        return `
+        <section class="photographer-page__footer">
+            <aside class="photographer-page__footer__aside">
+            <p class="photographer-page__footer__aside__total-likes">34433</p>
+            <button class="photographer-page__footer__aside__heart"></button>
+            </aside>
+            <p class="photographer-page__footer__price">${this._price}€/jour</p>
+        </section>
+        `
+
+    }
 }
