@@ -63,7 +63,7 @@ class Photographer {
                 <p class="photographer-page__header__content__tagline">${this._tagline}</p>
                 <ul class="photographer-page__header__content__taglist">${this._tags.map(tag => `<li href="../index.html" class="photographer-page__header__content__tags">#${tag}</li>`).join(" ")}</ul>
             </div>
-            <button class="photographer-page__contact__button focus__element-secondary" onclick="displayPhotographerModale()" aria-label="Contact me">Contactez-moi
+            <button class="photographer-page__contact__button focus__element-secondary" tabindex="2" onclick="displayPhotographerModale()" aria-label="Contact me">Contactez-moi
             </button>
             <img src="${this.picture}" class="photographer-page__header__photo" alt="${this._name}">
         </div> 
