@@ -67,14 +67,10 @@ function updateMediaGallery(gallery) {
 	});
 }
 
-
 /**
- * Function for initialized page
- */
-const init = async () => {
-	await displayPhotographerData();
-	Lightbox.init();
-
+	* Get and Update likes on medias
+	*/
+function getAndUpdateLikes() {
 	const $likesSection = document.querySelectorAll(
 		".photographer-page__gallery__media__footer__like-section"
 	);
@@ -88,6 +84,18 @@ const init = async () => {
 			elementCounter.innerHTML = (likeSum + (!liked ? 1 : -1))
 		});
 	});
+}
+
+
+/**
+ * Function for initialized page
+ */
+const init = async () => {
+	await displayPhotographerData();
+	getAndUpdateLikes()
+	Lightbox.init();
+
+
 };
 
 init();
