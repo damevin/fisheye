@@ -88,22 +88,27 @@
 		}
 	}
 	&__contact {
+		display: flex;
+		justify-content: center;
 		&__button {
 			background-color: $oldbrick;
 			border-radius: 5px;
 			border: none;
-			bottom: 3.69%;
+			bottom: 1rem;
 			color: white;
 			cursor: pointer;
-			font-size: 23, 44px;
-			left: 27.47%;
+			font-size: 23.44px;
+			height: 80px;
+			left: 50%;
+			margin-left: -150px;
 			position: fixed;
-			right: 27.2%;
-			top: 92%;
-			width: 170px;
+			width: 300px;
 		}
 	}
 	&__dropdown {
+		display: none;
+	}
+	&__footer {
 		display: none;
 	}
 }
@@ -118,6 +123,9 @@
 				width: 100%;
 			}
 		}
+	}
+	&__footer {
+		display: none;
 	}
 }
 
@@ -150,9 +158,9 @@
 				}
 			}
 			&__photo {
+				height: 200px;
 				justify-self: end;
 				margin-right: 2rem;
-				height: 200px;
 				max-width: 200px;
 				min-width: 200px;
 				object-fit: cover;
@@ -160,8 +168,8 @@
 		}
 		&__gallery {
 			display: grid;
-			grid-template-columns: repeat(3, 1fr);
 			gap: 2rem;
+			grid-template-columns: repeat(3, 1fr);
 			margin-top: 3rem;
 			&__card {
 				width: 100%;
@@ -169,14 +177,15 @@
 			}
 			&__media {
 				height: 300px;
-				width: 100%;
 				object-fit: cover;
+				width: 100%;
 			}
 		}
 		&__contact {
 			&__button {
-				position: initial;
 				height: 50px;
+				margin: 0;
+				position: initial;
 				&:focus {
 					border: 2px solid $flamepea;
 				}
