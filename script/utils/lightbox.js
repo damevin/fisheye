@@ -9,10 +9,18 @@ class Lightbox {
 		const gallerySection = document.querySelector(".photographer-page__gallery");
 		const links = Array.from(gallerySection.querySelectorAll('img[src$=".jpg"],source[src$=".mp4"]'));
 		const gallery = links.map((link) => link.getAttribute("src"));
-		links.forEach(link => {
+		links.forEach((link) => {
 			link.addEventListener("click", (e) => {
 				e.preventDefault();
 				new Lightbox(e.currentTarget.getAttribute("src"), gallery);
+			});
+			link.addEventListener("keyup", (e) => {
+				if (e.keyCode === 13) {
+					e.preventDefault();
+					new Lightbox(e.currentTarget.getAttribute("src"), gallery);
+				} else {
+					return;
+				}
 			});
 		});
 	}
@@ -27,18 +35,17 @@ class Lightbox {
 		this.element = this.buildDOM(url, alt);
 		this.gallery = gallery;
 		this.loadMedia(url, alt);
-		this.formatSrcForMediaLightbox(url)
+		this.formatSrcForMediaLightbox(url);
 		this.onKeyUp = this.onKeyUp.bind(this);
 		document.body.appendChild(this.element);
 		document.addEventListener("keyup", this.onKeyUp);
 	}
 
-
-	formatSrcForMediaLightbox(src){
-		let lightboxMediaLink = src.split('/')
-		lightboxMediaLink.splice(4, 0, "lightbox")
-		const formatedLightboxMediaLink = lightboxMediaLink.join("/")
-		return formatedLightboxMediaLink
+	formatSrcForMediaLightbox(src) {
+		let lightboxMediaLink = src.split("/");
+		lightboxMediaLink.splice(4, 0, "lightbox");
+		const formatedLightboxMediaLink = lightboxMediaLink.join("/");
+		return formatedLightboxMediaLink;
 	}
 
 	/**

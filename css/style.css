@@ -364,6 +364,12 @@ body {
   color: white;
 }
 
+.header__filters__navigation__tag:focus {
+  background-color: #911c1c;
+  cursor: pointer;
+  color: white;
+}
+
 @media (min-width: 768px) {
   .header__logo {
     width: 160px;
@@ -623,4 +629,16 @@ a {
 
 figure {
   margin: 0;
+}
+
+.photographer:focus {
+  outline: none;
+  border: 0.3rem solid #911c1c;
+  border-radius: 5px;
+}
+
+.focus__element:focus {
+  outline: none;
+  border: 0.3rem solid #911c1c;
+  border-radius: 5px;
 }
