@@ -41,6 +41,11 @@ body {
 					cursor: pointer;
 					color: white;
 				}
+				&:focus {
+					background-color: $oldbrick;
+					cursor: pointer;
+					color: white;
+				}
 			}
 		}
 	}

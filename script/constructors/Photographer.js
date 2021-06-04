@@ -38,8 +38,8 @@ class Photographer {
      */
     get userCard() {
         return `
-            <article class="photographer">
-                <a href="pages/photographer-page.html?id=${this._id}">
+            <article class="photographer" tabindex="3">
+                <a href="pages/photographer-page.html?id=${this._id}" tabindex="-1">
                     <img class="photographer__img" src="${this.picture}">
                     <h2 class="photographer__name">${this._name}</h2>
                 </a>
