@@ -52,9 +52,8 @@
 		&__photo {
 			border-radius: 50%;
 			height: 120px;
-			max-width: 120px;
-			min-width: 120px;
 			object-fit: cover;
+			width: 120px;
 		}
 	}
 	&__gallery {
