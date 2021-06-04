@@ -1,4 +1,4 @@
-<!DOCTYPE html>
+<!DOCTYPE html lang="fr">
 <head>
 	<link rel="stylesheet" href="../../css/style.css" />
 	<link rel="icon" type="image/png" href="assets/favicon.png" />
@@ -8,11 +8,11 @@
 	/>
 	<meta name="viewport" content="width=device-width, initial-scale=1.0" />
 	<!-- TO DO : Ajouter la nom du bon photographe en titre de page -->
-	<title>Fisheye - Mimi Keel</title>
+	<title>Fisheye - Mimi Keel test</title>
 </head>
 <body class="photographer-page__layout">
-	<a class="photographer-page__logo" href="/../../index.html">
-		<svg viewBox="0 0 200 50" fill="none" xmlns="http://www.w3.org/2000/svg">
+	<a class="photographer-page__logo" href="/../../index.html" aria-label="Go to fisheye homepage">
+		<svg viewBox="0 0 200 50" fill="none" xmlns="http://www.w3.org/2000/svg" alt="Fisheye Homepage">
 			<path
 				d="M24.7206 0.911377V6.51034H6.31164V17.578H21.4333V22.9166H6.31164V39.1926H0V0.911377H24.7206Z"
 				fill="#911C1C"
@@ -46,7 +46,7 @@
 	<header class="photographer-page__header-section" role="banner"></header>
 	<main class="photographer-page">
 		<div class="photographer-page__dropdown">
-		<label for="dropdownMenu">Trier par</label>
+		<label for="dropdownMenu" aria-labelledby="Order by">Trier par</label>
 		<select id="dropdownMenu" class="photographer-page__dropdown-menu">
 			<option value="popularity" class="photographer-page__dropdown-menu-item">Popularité</option>
 			<option value="date" class="photographer-page__dropdown-menu-item">Date</option>
@@ -55,7 +55,7 @@
 	</div>
 		<div class="photographer-page__gallery"></div>
 	</main>
-	<div id="contact__modal" class="modal">
+	<div id="contact__modal" class="modal" aria-modal="true">
 		<div class="modal-content">
 			<header class="modal-header">
 				<h1 class="modal-header-title">Contactez-moi</h1>

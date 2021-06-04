@@ -48,8 +48,6 @@ class Lightbox {
 			container.innerHTML = "";
 			container.appendChild(video);
 			container.appendChild(legend);
-			video.setAttribute("width", "100%");
-			video.setAttribute("height", "100%");
 			video.setAttribute("controls", "");
 			video.src = url;
 		} else if (url.endsWith(".jpg")) {
@@ -62,6 +60,7 @@ class Lightbox {
 			container.appendChild(legend);
 			image.alt = this.getFormatedTitle(url);
 			image.src = url;
+			image.classList.add("lightbox__container__img")
 		}
 	}
 
