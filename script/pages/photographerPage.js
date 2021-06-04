@@ -83,10 +83,19 @@ function getAndUpdateLikes() {
 	$likesSection.forEach(function (i) {
 		i.addEventListener("click", function () {
 			let elementCounter = i.querySelector('.photographer-page__gallery__media__footer__like-section-counter')
+			let elementButton = i.querySelector('.fa-heart')
 			let likeSum = Number(elementCounter.textContent)
 			const liked = i.dataset.liked === "true";
 			i.dataset.liked = !liked;
 			elementCounter.innerHTML = (likeSum + (!liked ? 1 : -1))
+			console.log(liked)
+			if (liked) {
+				elementButton.classList.add("far")
+				elementButton.classList.remove("fas")
+			} else if (!liked) {
+				elementButton.classList.add("fas")
+				elementButton.classList.remove("far")
+			}
 		});
 	});
 }
