@@ -517,11 +517,10 @@ body {
 }
 
 .photographer-page__gallery__media__footer__like-section-button {
-  background: url(../../assets/icons/heart.svg) no-repeat center center;
+  background: none;
   border: none;
-  cursor: pointer;
-  text-indent: -6000px;
-  width: 2rem;
+  color: #911c1c;
+  font-size: 1.6rem;
 }
 
 .photographer-page__contact {
