@@ -66,8 +66,8 @@
 			object-fit: cover;
 			width: 335px;
 			&:focus {
-				border: 1px solid $oldbrick
-		}
+				border: 1px solid $oldbrick;
+			}
 			&__footer {
 				display: flex;
 				justify-content: space-between;
@@ -93,7 +93,7 @@
 			bottom: 3.69%;
 			color: white;
 			cursor: pointer;
-			font-size: 23,44px;
+			font-size: 23, 44px;
 			left: 27.47%;
 			position: fixed;
 			right: 27.2%;
@@ -113,14 +113,14 @@
 			gap: 2rem;
 			&__media {
 				height: 300px;
-				width: 100%
+				width: 100%;
 			}
 		}
 	}
 }
 
 // Large devices (desktops, 992px and up)
-@media (min-width: 992px) {
+@media (min-width: $largedevices) {
 	.photographer-page {
 		display: inline;
 		&__header {
@@ -183,7 +183,6 @@
 		&__dropdown {
 			display: inline;
 			margin-bottom: 3rem;
-			}
 		}
 	}
-
+}
