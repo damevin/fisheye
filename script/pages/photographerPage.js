@@ -43,9 +43,9 @@ async function displayPhotographerData() {
 	const selectedPhotographerData = photographers.find(
 		(photographer) => photographer.id == identifier
 	);
-	const PhotographerConstructor = new Photographer(selectedPhotographerData)
-	PhotographerConstructor.updateDocumentTitle
-	
+	const PhotographerConstructor = new Photographer(selectedPhotographerData);
+	PhotographerConstructor.updateDocumentTitle;
+
 	const mediaGallery = media.filter((media) => media.photographerId == identifier);
 
 	updateMediaGallery(mediaGallery);
@@ -57,7 +57,7 @@ async function displayPhotographerData() {
 	});
 
 	const $photographerHeader = document.querySelector(".photographer-page__header-section");
-	const $photographerFooter = document.querySelector(".photographer-page__footer-section")
+	const $photographerFooter = document.querySelector(".photographer-page__footer-section");
 	$photographerHeader.innerHTML += new Photographer(selectedPhotographerData).userHeader;
 	$photographerFooter.innerHTML += new Photographer(selectedPhotographerData).userFooter;
 }
@@ -74,43 +74,57 @@ function updateMediaGallery(gallery) {
 }
 
 /**
-	* Get and Update likes on medias
-	*/
+ * Get and Update likes on medias
+ */
 function getAndUpdateLikes() {
 	const $likesSection = document.querySelectorAll(
 		".photographer-page__gallery__media__footer__like-section"
 	);
 
+	function reloadLikes() {
+		let $likeCounter = document.querySelector('.photographer-page__footer__aside__total-likes')
+		let $totalLikesElements = document.querySelectorAll(
+			".photographer-page__gallery__media__footer__like-section-counter"
+		);
+		let likeSum = 0
+		$totalLikesElements.forEach(function (like) {
+			let likeUnit = Number(like.textContent)
+			likeSum += likeUnit
+		});
+		$likeCounter.innerHTML = likeSum
+		return likeSum
+	}
+
 	$likesSection.forEach(function (i) {
 		i.addEventListener("click", function () {
-			let elementCounter = i.querySelector('.photographer-page__gallery__media__footer__like-section-counter')
-			let elementButton = i.querySelector('.fa-heart')
-			let likeSum = Number(elementCounter.textContent)
+			let elementCounter = i.querySelector(
+				".photographer-page__gallery__media__footer__like-section-counter"
+			);
+			let elementButton = i.querySelector(".fa-heart");
+			let likeSum = Number(elementCounter.textContent);
 			const liked = i.dataset.liked === "true";
 			i.dataset.liked = !liked;
-			elementCounter.innerHTML = (likeSum + (!liked ? 1 : -1))
-			console.log(liked)
+			elementCounter.innerHTML = likeSum + (!liked ? 1 : -1);
 			if (liked) {
-				elementButton.classList.add("far")
-				elementButton.classList.remove("fas")
+				reloadLikes();
+				elementButton.classList.add("far");
+				elementButton.classList.remove("fas");
 			} else if (!liked) {
-				elementButton.classList.add("fas")
-				elementButton.classList.remove("far")
+				reloadLikes();
+				elementButton.classList.add("fas");
+				elementButton.classList.remove("far");
 			}
 		});
 	});
 }
-
 
 /**
  * Function for initialized page
  */
 const init = async () => {
 	await displayPhotographerData();
-	getAndUpdateLikes()
+	getAndUpdateLikes();
 	Lightbox.init();
-
-
 };
 
 init();

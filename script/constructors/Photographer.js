@@ -2,7 +2,7 @@ class Photographer {
     /**
      * @param data
      */
-    constructor(data) {
+    constructor(data, likes) {
         this._id = data.id
         this._city = data.city
         this._country = data.country
@@ -11,6 +11,7 @@ class Photographer {
         this._price = data.price
         this._tagline = data.tagline
         this._tags = data.tags
+        this._totalLikes = likes
     }
     /**
      * Get full URL link for photographer profile picture
@@ -75,7 +76,7 @@ class Photographer {
         return `
         <section class="photographer-page__footer">
             <aside class="photographer-page__footer__aside">
-            <p class="photographer-page__footer__aside__total-likes">${this.userTotalLikes}</p>
+            <p class="photographer-page__footer__aside__total-likes">${this.userReloadLikes}</p>
             <i class="fas fa-heart"></i>
             </aside>
             <p class="photographer-page__footer__price">${this._price}€/jour</p>
@@ -83,12 +84,15 @@ class Photographer {
         `
     }
 
-    get userTotalLikes() {
-        let totalLikes = document.querySelectorAll('.photographer-page__gallery__media__footer__like-section-counter')
-        totalLikes.forEach(like => {
-            let likeCounter = Number(like.textContent)
-            let sum = likeCounter ++
-            return sum
-        })            
-    }
+    get userReloadLikes() {
+		let $totalLikesElements = document.querySelectorAll(
+			".photographer-page__gallery__media__footer__like-section-counter"
+		);
+		let likeSum = 0
+		$totalLikesElements.forEach(function (like) {
+			let likeUnit = Number(like.textContent)
+			likeSum += likeUnit
+		});
+		return likeSum
+	}           
 }
