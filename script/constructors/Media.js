@@ -40,7 +40,7 @@ class Photography {
                 <figcaption class="photographer-page__gallery__media__footer__figcaption">${this._imgTitle}</figcaption>
                 <div class="photographer-page__gallery__media__footer__like-section">
                     <p class="photographer-page__gallery__media__footer__like-section-counter">${this._imgLikes}</p>
-                    <button class="photographer-page__gallery__media__footer__like-section-button focus__element-secondary" tab-index="1" aria-label="likes">Like</button>
+                    <button class="photographer-page__gallery__media__footer__like-section-button focus__element-secondary" tab-index="1" aria-label="likes"><i class="far fa-heart"></i></button>
                 </div>
             </footer>
         </figure>
@@ -74,7 +74,7 @@ class Video {
                 <figcaption class="photographer-page__gallery__media__footer__figcaption">${this._videoTitle}</figcaption>
                 <aside class="photographer-page__gallery__media__footer__like-section">
                     <p class="photographer-page__gallery__media__footer__like-section-counter">${this._videoLikes}</p>
-                    <button  class="photographer-page__gallery__media__footer__like-section-button focus__element-secondary     ">Like</button>
+                    <button class="photographer-page__gallery__media__footer__like-section-button focus__element-secondary"><i class="far fa-heart"></i></button>
                 </aside>
             </footer>
         </figure>
