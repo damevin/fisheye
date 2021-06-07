@@ -89,8 +89,6 @@ class Photographer {
             let likeCounter = Number(like.textContent)
             let sum = likeCounter ++
             return sum
-        })
-        console.log(sum)
-            
+        })            
     }
 }
