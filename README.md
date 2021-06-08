@@ -40,13 +40,21 @@ run liveserver
 
 ### Releases
 
+#### 1.1.0 (Juin 2021)
+
+- Amélioration de l'accessibilté
+- Corrections d'erreurs de validateurs (W3C, ACHECKER)
+
 #### 1.0.0 (Mai 2021)
 
 - Déploiement de l'application en production
 
 ## Code
 
-[![Build Status](https://qa.nuxeo.org/jenkins/buildStatus/icon?job=/nuxeo/addons_nuxeo-sample-project-master)](https://qa.nuxeo.org/jenkins/job/nuxeo/job/addons_nuxeo-sample-project-master/)
+[![Netlify Status](https://api.netlify.com/api/v1/badges/aa789e69-9041-4891-97fc-47267cbc3338/deploy-status)](https://app.netlify.com/sites/musing-goodall-5089ae/deploys)
+
+![vcss](https://user-images.githubusercontent.com/72107589/121155081-c481b480-c847-11eb-9844-f98b8ee10cb0.png)
+
 
 ### Content
 
