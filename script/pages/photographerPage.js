@@ -26,7 +26,7 @@ const filterByOption = (mediaGallery, option) => {
 };
 
 /**
- * @async Display photographer data, based on his ID
+ * @async Display photogrrapher data, based on his ID
  *	@constant {Array | Objects} media & photographers
  * @constant params - Get params in URL
  * @constant identifier - Get id in params
