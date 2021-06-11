@@ -13,22 +13,23 @@ Les clients peuvent visualiser les travaux des photographes, leurs prix, ajouter
 
 ## Table des matières
 
-> * [A propos](#a-propos)
->   * [Présentation de l'application](#présentation-de-lapplication)
->   * [Installation](#installation)
->   * [Screenshots](#screenshots)
->   * [Releases](#releases)
->   * [Code](#code)
->     * [Content](#content)
->     * [Wiki](#)
->   * [Resources (Documentation and other links)](#resources-documentation-and-other-links)
->   * [Dépendances utilisées](#dépendances-utilisées)
->   * [Contribuer au projet](#contribuer-au-projet)
->   * [License](#license)
+> - [A propos](#a-propos)
+>   - [Présentation de l'application](#présentation-de-lapplication)
+>   - [Installation](#installation)
+>   - [Screenshots](#screenshots)
+>   - [Releases](#releases)
+>   - [Code](#code)
+>     - [Content](#content)
+>     - [Wiki](#)
+>   - [Resources (Documentation and other links)](#resources-documentation-and-other-links)
+>   - [Dépendances utilisées](#dépendances-utilisées)
+>   - [Contribuer au projet](#contribuer-au-projet)
+>   - [License](#license)
 
 ## Installation
 
-* Depuis la console
+- Depuis la console
+
 ```
 git clone https://github.com/damevin/fisheye.git
 
@@ -37,13 +38,12 @@ run liveserver
 
 ### Screenshots
 
-
 ### Releases
 
 #### 1.1.0 (Juin 2021)
 
 - Amélioration de l'accessibilté
-- Corrections d'erreurs de validateurs (W3C, ACHECKER)
+- Corrections d'erreurs de validateurs (W3C, ACHECKER) !
 
 #### 1.0.0 (Mai 2021)
 
@@ -55,15 +55,14 @@ run liveserver
 
 ![vcss](https://user-images.githubusercontent.com/72107589/121155081-c481b480-c847-11eb-9844-f98b8ee10cb0.png)
 
-
 ### Content
 
 Todo : diagramm UML
 
 ## Resources (Documentation and other links)
 
-* [Maquettes de l'application](https://www.figma.com/file/pt8xJxC1QffW4HX16QhGZJ/UI-Design-FishEye-FR?node-id=0%3A1)
-* [Notes de réunion](https://s3-eu-west-1.amazonaws.com/course.oc-static.com/projects/Front-End+V2/P5+Javascript+%26+Accessibility/Notes+de+re%CC%81union.pdf)
+- [Maquettes de l'application](https://www.figma.com/file/pt8xJxC1QffW4HX16QhGZJ/UI-Design-FishEye-FR?node-id=0%3A1)
+- [Notes de réunion](https://s3-eu-west-1.amazonaws.com/course.oc-static.com/projects/Front-End+V2/P5+Javascript+%26+Accessibility/Notes+de+re%CC%81union.pdf)
 
 ### Dépendances utilisées
 
@@ -71,11 +70,10 @@ Todo : diagramm UML
 
 ## Contribuer au projet
 
-### Contributeurs 
+### Contributeurs
 
-* Raphaël DAMEVIN
-* Thomas DIMNET 
-
+- Raphaël DAMEVIN
+- Thomas DIMNET
 
 ## License
 
