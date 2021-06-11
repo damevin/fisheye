@@ -38,6 +38,13 @@ run liveserver
 
 ### Screenshots
 
+![Apple iPhone 8 Plus Screenshot 0](https://user-images.githubusercontent.com/72107589/121696038-f0ad6780-cacb-11eb-825f-286b1987e1c5.png)
+![Apple iPhone 8 Plus Screenshot 1](https://user-images.githubusercontent.com/72107589/121696042-f1de9480-cacb-11eb-9c58-f4f431845fc9.png)
+![Apple iPhone 8 Plus Screenshot 2](https://user-images.githubusercontent.com/72107589/121696043-f2772b00-cacb-11eb-887d-424ebc056d38.png)
+![Apple iPhone 8 Plus Screenshot 3](https://user-images.githubusercontent.com/72107589/121696045-f30fc180-cacb-11eb-810a-626262c09224.png)
+![Apple iPhone 8 Plus Screenshot 4](https://user-images.githubusercontent.com/72107589/121696047-f3a85800-cacb-11eb-9dd9-1023d337c00b.png)
+
+
 ### Releases
 
 #### 1.1.0 (Juin 2021)
