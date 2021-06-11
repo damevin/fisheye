@@ -15,12 +15,12 @@ const displayData = async (photographers) => {
 };
 
 const filterByTag = (tag, photographers) => {
-	if (tag === 'all') {
-		return photographers
+	if (tag === "all") {
+		return photographers;
 	} else {
-		return photographers.filter((photographer) => photographer.tags.includes(tag))
+		return photographers.filter((photographer) => photographer.tags.includes(tag));
 	}
-}
+};
 
 const init = async () => {
 	const $filterList = document.querySelector(".header__filters__navigation");
@@ -28,12 +28,23 @@ const init = async () => {
 	const { photographers } = await getData();
 	$tags.forEach((tag) => {
 		tag.addEventListener("click", function () {
-			const filteredPhotographers = filterByTag(tag.textContent.replace(/(\s|\#)+/g, '').toLowerCase(), photographers)
+			const filteredPhotographers = filterByTag(
+				tag.textContent.replace(/(\s|\#)+/g, "").toLowerCase(),
+				photographers
+			);
 			displayData(filteredPhotographers);
+		});
+		tag.addEventListener("keypress", function (e) {
+			if (e.key === "Enter") {
+				const filteredPhotographers = filterByTag(
+					tag.textContent.replace(/(\s|\#)+/g, "").toLowerCase(),
+					photographers
+				);
+				displayData(filteredPhotographers);
+			}
 		});
 	});
 	displayData(photographers);
-
-}
+};
 
 init();

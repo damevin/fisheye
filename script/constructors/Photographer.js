@@ -39,7 +39,7 @@ class Photographer {
      */
     get userCard() {
         return `
-            <a href="pages/photographer-page.html?id=${this._id}" tabindex="3" class="focus__element" >
+            <a href="pages/photographer-page.html?id=${this._id}" tabindex="10" class="focus__element" >
                 <article class="photographer">
                     <img class="photographer__img" src="${this.picture}">
                     <h2 class="photographer__name">${this._name}</h2>
@@ -64,7 +64,7 @@ class Photographer {
                 <p class="photographer-page__header__content__tagline">${this._tagline}</p>
                 <ul class="photographer-page__header__content__taglist">${this._tags.map(tag => `<li href="../index.html" class="photographer-page__header__content__tags">#${tag}</li>`).join(" ")}</ul>
             </div>
-            <button class="photographer-page__contact__button focus__element-secondary" tabindex="2" onclick="displayPhotographerModale()" aria-label="Contact me">Contactez-moi
+            <button class="photographer-page__contact__button focus__element-secondary" tabindex="3" onclick="displayPhotographerModale()" aria-label="Contact me">Contactez-moi
             </button>
             <img src="${this.picture}" class="photographer-page__header__photo" alt="${this._name}">
         </div> 
