@@ -57,7 +57,6 @@ run liveserver
 
 ### Content
 
-Todo : diagramm UML
 
 ## Resources (Documentation and other links)
 
@@ -67,6 +66,7 @@ Todo : diagramm UML
 ### Dépendances utilisées
 
 [SCSS](https://sass-lang.com/documentation)
+[Netlify (déploiment)](https://www.netlify.com/)
 
 ## Contribuer au projet
 
