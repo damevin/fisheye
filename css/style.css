@@ -672,20 +672,31 @@ figure {
   margin: 0;
 }
 
-.photographer:focus {
-  outline: none;
+.focus__element:focus {
   border: 2px solid #911c1c;
   border-radius: 5px;
 }
 
-.focus__element:focus {
-  outline: none;
-  border: 2px #911c1c;
+.focus__element-secondary:focus {
+  border: 2px solid #d3573c;
   border-radius: 5px;
 }
 
-.focus__element-secondary:focus {
-  outline: none;
-  border: 2px solid #d3573c;
-  border-radius: 5px;
+.skip-link {
+  transition: transform 0.3s;
+  background: #911c1c;
+  color: #fff;
+  font-weight: 700;
+  left: 50%;
+  padding: 4px;
+  position: absolute;
+  transform: translateY(-300%);
+}
+
+.skip-link:focus {
+  transform: translateY(-100%);
+}
+
+.skip-link:focus-within {
+  transform: translateY(-100%);
 }
