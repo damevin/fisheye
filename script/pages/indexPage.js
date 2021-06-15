@@ -1,10 +1,18 @@
-// GET
-
-const getData = async () =>
+ /**
+		* Fetch photographers data
+		* @constant getData @async 
+		* @returns {Array | Object}
+		* @description Return an array of photographers
+	 */
+	const getData = async () =>
 	await fetch("../data/photographers.json", { mode: "no-cors" })
 		.then((res) => res.json())
 		.catch((err) => console.log("An error occurs when fetching photographers", err));
-
+ 
+/**
+	* Update and create photographer section with photographers cards
+	* @param {*} photographers - 
+	*/
 const displayData = async (photographers) => {
 	const element = document.querySelector(".photographer__section");
 	element.innerHTML = "";
@@ -14,6 +22,12 @@ const displayData = async (photographers) => {
 	});
 };
 
+/** 
+	* Sort photographers array with tags
+	* @param tag - Selected tag
+	* @param photographers - Array of photographers
+	* @param - Return all photographers, or an array of photographers that includes selected tag
+ */
 const filterByTag = (tag, photographers) => {
 	if (tag === "all") {
 		return photographers;
@@ -22,6 +36,9 @@ const filterByTag = (tag, photographers) => {
 	}
 };
 
+/**
+	* Main function for display photographers cards
+	*/
 const init = async () => {
 	const $filterList = document.querySelector(".header__filters__navigation");
 	const $tags = $filterList.querySelectorAll("li");
