@@ -54,6 +54,7 @@ async function displayPhotographerData() {
 		$elementGallery.innerHTML = "";
 		const option = filterByOption(mediaGallery, event.target.value);
 		updateMediaGallery(option);
+		Lightbox.init()
 	});
 
 	const $photographerHeader = document.querySelector(".photographer-page__header-section");
