@@ -27,22 +27,17 @@ const filterByOption = (mediaGallery, option) => {
 
 /**
  * @async Display photogrrapher data, based on his ID
- *	@constant {Array | Objects} media & photographers
- * @constant params - Get params in URL
- * @constant identifier - Get id in params
- * @constant selectedPhotographerData - return
- * @constant $photographerHeader {HTMLElement} - Get html for place photographer header
- * @constant mediaGallery - Return array of medias, based on photographer identifier
- * @function updateMediaGallery
- * @event listen when user change select state
  */
 async function displayPhotographerData() {
 	const { media, photographers } = await getData();
+
 	const params = new URLSearchParams(document.location.search.substring(1));
 	const identifier = params.get("id");
+
 	const selectedPhotographerData = photographers.find(
 		(photographer) => photographer.id == identifier
 	);
+
 	const PhotographerConstructor = new Photographer(selectedPhotographerData);
 	PhotographerConstructor.updateDocumentTitle;
 
@@ -74,9 +69,6 @@ function updateMediaGallery(gallery) {
 	});
 }
 
-/**
- * Get and Update likes on medias
- */
 function getAndUpdateLikes() {
 	const $likesSection = document.querySelectorAll(
 		".photographer-page__gallery__media__footer__like-section"

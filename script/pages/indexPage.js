@@ -1,13 +1,12 @@
- /**
-		* Fetch photographers data
-		* @constant getData @async 
-		* @returns {Array | Object}
-		* @description Return an array of photographers
-	 */
-	const getData = async () =>
-	await fetch("../data/photographers.json", { mode: "no-cors" })
-		.then((res) => res.json())
-		.catch((err) => console.log("An error occurs when fetching photographers", err));
+/**
+ * Fetch photographers data
+ * @constant getData @async 
+ * @returns {Array | Object}
+ * @description Return an array of photographers
+ */
+const getData = () => fetch("../data/photographers.json", { mode: "no-cors" })
+	.then((res) => res.json())
+	.catch((err) => console.log("An error occurs when fetching photographers", err));
  
 /**
 	* Update and create photographer section with photographers cards
@@ -31,9 +30,9 @@ const displayData = async (photographers) => {
 const filterByTag = (tag, photographers) => {
 	if (tag === "all") {
 		return photographers;
-	} else {
-		return photographers.filter((photographer) => photographer.tags.includes(tag));
 	}
+	
+	return photographers.filter((photographer) => photographer.tags.includes(tag));
 };
 
 /**
@@ -42,8 +41,12 @@ const filterByTag = (tag, photographers) => {
 const init = async () => {
 	const $filterList = document.querySelector(".header__filters__navigation");
 	const $tags = $filterList.querySelectorAll("li");
+
 	const { photographers } = await getData();
+
+	// We listen here two events according to how the users can browse the project
 	$tags.forEach((tag) => {
+
 		tag.addEventListener("click", function () {
 			const filteredPhotographers = filterByTag(
 				tag.textContent.replace(/(\s|\#)+/g, "").toLowerCase(),
@@ -51,6 +54,7 @@ const init = async () => {
 			);
 			displayData(filteredPhotographers);
 		});
+
 		tag.addEventListener("keypress", function (e) {
 			if (e.key === "Enter") {
 				const filteredPhotographers = filterByTag(
@@ -61,6 +65,7 @@ const init = async () => {
 			}
 		});
 	});
+
 	displayData(photographers);
 };
 

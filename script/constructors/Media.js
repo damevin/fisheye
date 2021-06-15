@@ -30,20 +30,20 @@ class Photography {
 
 	/**
 	 * Create HTML photography element
-	 * @returns {HTMLelement}
+	 * @returns {string}
 	 */
 	createHtml() {
 		return `
-        <figure class="photographer-page__gallery__card" aria-label="${this._imgTitle} closeup view">
-            <img class="photographer-page__gallery__media focus__element-secondary" loading="lazy" tabindex="5" src="../assets/medias/${this._imgPhotographerId}/${this._imgSrc}" alt="${this._imgAlt}" />
-            <footer class="photographer-page__gallery__media__footer">
-                <figcaption class="photographer-page__gallery__media__footer__figcaption">${this._imgTitle}</figcaption>
-                <div class="photographer-page__gallery__media__footer__like-section">
-                    <p class="photographer-page__gallery__media__footer__like-section-counter">${this._imgLikes}</p>
-                    <button class="photographer-page__gallery__media__footer__like-section-button focus__element-secondary" tabindex="5" aria-label="likes"><i class="far fa-heart" aria-hidden="true"></i></button>
-                </div>
-            </footer>
-        </figure>
+			<figure class="photographer-page__gallery__card" aria-label="${this._imgTitle} closeup view">
+				<img class="photographer-page__gallery__media focus__element-secondary" loading="lazy" tabindex="5" src="../assets/medias/${this._imgPhotographerId}/${this._imgSrc}" alt="${this._imgAlt}" />
+				<footer class="photographer-page__gallery__media__footer">
+					<figcaption class="photographer-page__gallery__media__footer__figcaption">${this._imgTitle}</figcaption>
+					<div class="photographer-page__gallery__media__footer__like-section">
+						<p class="photographer-page__gallery__media__footer__like-section-counter">${this._imgLikes}</p>
+						<button class="photographer-page__gallery__media__footer__like-section-button focus__element-secondary" tabindex="5" aria-label="likes"><i class="far fa-heart" aria-hidden="true"></i></button>
+					</div>
+				</footer>
+			</figure>
         `;
 	}
 }
