@@ -45,7 +45,7 @@ class Photographer {
         return `
             <a href="pages/photographer-page.html?id=${this._id}" tabindex="10" class="focus__element" >
                 <article class="photographer">
-                    <img class="photographer__img" src="${this.picture}">
+                    <img class="photographer__img" src="${this.picture}" alt="${this._name}">
                     <h2 class="photographer__name">${this._name}</h2>
                     <p class="photographer__localization">${this.localization}</p>
                     <p class="photographer__tagline">${this._tagline}</p>
