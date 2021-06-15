@@ -28,7 +28,11 @@ class Photographer {
     get localization() {
         return `${this._city}, ${this._country}`
     }
-
+    
+    /**
+     * Get photographer name for change page title
+     * @returns {string}
+     */
     get updateDocumentTitle() {
         document.title += ` - ${this._name}`
     }
@@ -71,7 +75,10 @@ class Photographer {
         `
     }
 
-
+    /**
+     * Create photographer footer on his page
+     * @returns {string} Return user footer
+     */
     get userFooter() {
         return `
         <section class="photographer-page__footer">
@@ -84,11 +91,20 @@ class Photographer {
         `
     }
 
+    /**
+     * Function for count all likes on photographer page, transform text content in number
+     * @const $totalLikesElements {Array} - Get all likes on media in photographer page
+     * @const likeSum {Number} - Define the sum to zero
+     * @returns likeSum {likeSum} - Total sum of media likes
+     */
     get userReloadLikes() {
 		let $totalLikesElements = document.querySelectorAll(
 			".photographer-page__gallery__media__footer__like-section-counter"
 		);
 		let likeSum = 0
+        /**
+         * Iterate in all of $totalLikesElements for counting and add it to likeSum
+         */
 		$totalLikesElements.forEach(function (like) {
 			let likeUnit = Number(like.textContent)
 			likeSum += likeUnit
