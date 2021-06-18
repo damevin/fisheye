@@ -2,6 +2,9 @@
 
 [![Netlify Status](https://api.netlify.com/api/v1/badges/aa789e69-9041-4891-97fc-47267cbc3338/deploy-status)](https://app.netlify.com/sites/musing-goodall-5089ae/deploys)
 
+![icon_W2_aa](https://user-images.githubusercontent.com/72107589/122524666-b3d7f800-d018-11eb-97a3-9d93795e1d0a.png)
+
+
 ## A propos
 
 Projet n°7 réalisé dans le cadre du diplôme developpeur front-end de l'école OpenClassRooms
@@ -61,6 +64,9 @@ run liveserver
 [![Netlify Status](https://api.netlify.com/api/v1/badges/aa789e69-9041-4891-97fc-47267cbc3338/deploy-status)](https://app.netlify.com/sites/musing-goodall-5089ae/deploys)
 
 ![vcss](https://user-images.githubusercontent.com/72107589/121155081-c481b480-c847-11eb-9844-f98b8ee10cb0.png)
+
+![icon_W2_aa](https://user-images.githubusercontent.com/72107589/122524638-acb0ea00-d018-11eb-8ddc-a721e6a803bd.png)
+
 
 ### Content
 
