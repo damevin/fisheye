@@ -61,6 +61,7 @@
 		grid-template-columns: 1fr;
 		&__media {
 			cursor: pointer;
+			border-radius: 5px;
 			height: 190px;
 			object-fit: cover;
 			width: 100%;
