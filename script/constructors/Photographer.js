@@ -101,10 +101,7 @@ class Photographer {
 		let $totalLikesElements = document.querySelectorAll(
 			".photographer-page__gallery__media__footer__like-section-counter"
 		);
-		let likeSum = 0
-        /**
-         * Iterate in all of $totalLikesElements for counting and add it to likeSum
-         */
+		let likeSum = 0;
 		$totalLikesElements.forEach(function (like) {
 			let likeUnit = Number(like.textContent)
 			likeSum += likeUnit
