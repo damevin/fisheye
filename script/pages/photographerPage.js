@@ -74,9 +74,6 @@ function updateMediaGallery(gallery) {
 	});
 }
 
-/**
- * Get and Update likes on medias
- */
 function getAndUpdateLikes() {
 	const $likesSection = document.querySelectorAll(
 		".photographer-page__gallery__media__footer__like-section"
