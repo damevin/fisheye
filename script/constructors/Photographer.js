@@ -83,7 +83,7 @@ class Photographer {
         return `
         <section class="photographer-page__footer">
             <aside class="photographer-page__footer__aside">
-            <p class="photographer-page__footer__aside__total-likes" aria-label="Nombre total de likes" tabindex="6">${this.userReloadLikes}</p>
+            <p class="photographer-page__footer__aside__total-likes" aria-label="Nombre total de likes ${this.userReloadLikes}" tabindex="6">${this.userReloadLikes}</p>
             <i class="fas fa-heart" aria-hidden="true"></i>
             </aside>
             <p class="photographer-page__footer__price" tabindex="7" aria-label="Tarif du photographe">${this._price}€/jour</p>
