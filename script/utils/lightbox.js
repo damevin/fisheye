@@ -34,7 +34,7 @@ class Lightbox {
 	constructor(url, gallery, alt) {
 		this.element = this.buildDOM(url, alt);
 		this.gallery = gallery;
-		this.loadMedia(url, alt);
+		this.loadMedia(url, alt, gallery);
 		this.formatSrcForMediaLightbox(url);
 		this.onKeyUp = this.onKeyUp.bind(this);
 		document.body.appendChild(this.element);
@@ -151,10 +151,10 @@ class Lightbox {
 		const dom = document.createElement("div");
 		dom.classList.add("lightbox");
 		dom.innerHTML = `
-    <button class="lightbox__close" aria-label="Close dialog">Fermer</button>
-    <button class="lightbox__next" aria-label="Next image">Suivant</button>
-    <button class="lightbox__previous" aria-label="Previous image">Précédent</button>
-    <div class="lightbox__container" role="dialog" aria-label="image closeup view">
+    <button class="lightbox__close" aria-label="Fermer la visualition du média">Fermer</button>
+    <button class="lightbox__next" aria-label="Image suivante">Suivant</button>
+    <button class="lightbox__previous" aria-label="Image précédente">Précédent</button>
+    <div class="lightbox__container" role="dialog" aria-label="">
     <p class="lightbox__container__img-title"></p>
     </div>`;
 		dom.querySelector(".lightbox__close").addEventListener("click", this.close.bind(this));

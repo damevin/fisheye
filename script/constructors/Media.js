@@ -1,7 +1,7 @@
 class MediaFactory {
 	/**
 	 * Filter based on media type
-	 * @param {*} data
+	 * @param {Array | Object} data
 	 * @returns call constructor based on data.type
 	 */
 	constructor(data) {
@@ -18,7 +18,7 @@ class MediaFactory {
 class Photography {
 	/**
 	 * Photography media constructor
-	 * @param {*} data
+	 * @param {Array | Object} data
 	 */
 	constructor(data) {
 		this._imgSrc = data.image;
@@ -40,7 +40,7 @@ class Photography {
                 <figcaption class="photographer-page__gallery__media__footer__figcaption">${this._imgTitle}</figcaption>
                 <div class="photographer-page__gallery__media__footer__like-section">
                     <p class="photographer-page__gallery__media__footer__like-section-counter">${this._imgLikes}</p>
-                    <button class="photographer-page__gallery__media__footer__like-section-button focus__element-secondary" tabindex="5" aria-label="likes"><i class="far fa-heart" aria-hidden="true"></i></button>
+                    <button class="photographer-page__gallery__media__footer__like-section-button focus__element-secondary" title="J'aime" tabindex="5" aria-label="Ajouter un j'aime"><i class="far fa-heart" aria-hidden="true"></i></button>
                 </div>
             </footer>
         </figure>
@@ -51,7 +51,7 @@ class Photography {
 class Video {
 	/**
 	 * Video media constructor
-	 * @param {*} data
+	 * @param {Array | Object} data
 	 */
 	constructor(data) {
 		this._videoSrc = data.video;

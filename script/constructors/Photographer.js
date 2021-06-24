@@ -1,6 +1,6 @@
 class Photographer {
     /**
-     * @param data
+     * @param data {Object}
      */
     constructor(data, likes) {
         this._id = data.id
@@ -43,9 +43,9 @@ class Photographer {
      */
     get userCard() {
         return `
-            <a href="pages/photographer-page.html?id=${this._id}" tabindex="10" class="focus__element" >
+            <a href="pages/photographer-page.html?id=${this._id}" tabindex="10" class="focus__element" aria-label="Aller sur la page de ${this._name} basé à ${this.localization} sont tarif journalier est de ${this._price} euro par jour. Sa spécialité est ${this._tags} et sa devise ${this._tagline}" >
                 <article class="photographer">
-                    <img class="photographer__img" src="${this.picture}" alt="${this._name}">
+                    <img class="photographer__img" src="${this.picture}" alt="Photographie de profil de ${this._name}">
                     <h2 class="photographer__name">${this._name}</h2>
                     <p class="photographer__localization">${this.localization}</p>
                     <p class="photographer__tagline">${this._tagline}</p>
@@ -68,9 +68,9 @@ class Photographer {
                 <p class="photographer-page__header__content__tagline">${this._tagline}</p>
                 <ul class="photographer-page__header__content__taglist">${this._tags.map(tag => `<li href="../index.html" class="photographer-page__header__content__tags">#${tag}</li>`).join(" ")}</ul>
             </div>
-            <button class="photographer-page__contact__button focus__element-secondary" tabindex="3" onclick="displayPhotographerModale()" aria-label="Contact me">Contactez-moi
+            <button class="photographer-page__contact__button focus__element-secondary" tabindex="3" onclick="displayPhotographerModale()" aria-label="Contacter le photographe ${this._name}">Contactez-moi
             </button>
-            <img src="${this.picture}" class="photographer-page__header__photo" alt="${this._name}">
+            <img src="${this.picture}" class="photographer-page__header__photo" alt="Photographie de profil de ${this._name}">
         </div> 
         `
     }
@@ -83,10 +83,10 @@ class Photographer {
         return `
         <section class="photographer-page__footer">
             <aside class="photographer-page__footer__aside">
-            <p class="photographer-page__footer__aside__total-likes" aria-label="Nombre total de likes" tabindex="6">${this.userReloadLikes}</p>
+            <p class="photographer-page__footer__aside__total-likes" aria-label="Nombre total de j'aime ${this.userReloadLikes}" tabindex="6">${this.userReloadLikes}</p>
             <i class="fas fa-heart" aria-hidden="true"></i>
             </aside>
-            <p class="photographer-page__footer__price" tabindex="7" aria-label="Tarif du photographe">${this._price}€/jour</p>
+            <p class="photographer-page__footer__price" tabindex="7" aria-label="Tarif du photographe ${this._price} euro par jour">${this._price}€/jour</p>
         </section>
         `
     }
@@ -101,10 +101,7 @@ class Photographer {
 		let $totalLikesElements = document.querySelectorAll(
 			".photographer-page__gallery__media__footer__like-section-counter"
 		);
-		let likeSum = 0
-        /**
-         * Iterate in all of $totalLikesElements for counting and add it to likeSum
-         */
+		let likeSum = 0;
 		$totalLikesElements.forEach(function (like) {
 			let likeUnit = Number(like.textContent)
 			likeSum += likeUnit
