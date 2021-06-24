@@ -1,7 +1,7 @@
 class MediaFactory {
 	/**
 	 * Filter based on media type
-	 * @param {*} data
+	 * @param {Array | Object} data
 	 * @returns call constructor based on data.type
 	 */
 	constructor(data) {
@@ -18,7 +18,7 @@ class MediaFactory {
 class Photography {
 	/**
 	 * Photography media constructor
-	 * @param {*} data
+	 * @param {Array | Object} data
 	 */
 	constructor(data) {
 		this._imgSrc = data.image;
@@ -51,7 +51,7 @@ class Photography {
 class Video {
 	/**
 	 * Video media constructor
-	 * @param {*} data
+	 * @param {Array | Object} data
 	 */
 	constructor(data) {
 		this._videoSrc = data.video;
