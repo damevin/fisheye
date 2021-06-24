@@ -101,19 +101,22 @@ function getAndUpdateLikes() {
 			let elementCounter = i.querySelector(
 				".photographer-page__gallery__media__footer__like-section-counter"
 			);
-			let elementButton = i.querySelector(".fa-heart");
+			let button = i.querySelector('.photographer-page__gallery__media__footer__like-section-button')
+			let iconButton = i.querySelector(".fa-heart");
 			let likeSum = Number(elementCounter.textContent);
 			const liked = i.dataset.liked === "true";
 			i.dataset.liked = !liked;
 			elementCounter.innerHTML = likeSum + (!liked ? 1 : -1);
 			if (liked) {
 				reloadLikes();
-				elementButton.classList.add("far");
-				elementButton.classList.remove("fas");
+				iconButton.classList.add("far");
+				iconButton.classList.remove("fas");
+				button.ariaLabel = "J'aime pas"
 			} else if (!liked) {
 				reloadLikes();
-				elementButton.classList.add("fas");
-				elementButton.classList.remove("far");
+				iconButton.classList.add("fas");
+				iconButton.classList.remove("far");
+				button.ariaLabel = "J'aime"
 			}
 		});
 	});

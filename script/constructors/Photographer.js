@@ -45,7 +45,7 @@ class Photographer {
         return `
             <a href="pages/photographer-page.html?id=${this._id}" tabindex="10" class="focus__element" >
                 <article class="photographer">
-                    <img class="photographer__img" src="${this.picture}" alt="${this._name}">
+                    <img class="photographer__img" src="${this.picture}" alt="Photographie de profil de ${this._name}">
                     <h2 class="photographer__name">${this._name}</h2>
                     <p class="photographer__localization">${this.localization}</p>
                     <p class="photographer__tagline">${this._tagline}</p>
@@ -70,7 +70,7 @@ class Photographer {
             </div>
             <button class="photographer-page__contact__button focus__element-secondary" tabindex="3" onclick="displayPhotographerModale()" aria-label="Contact me">Contactez-moi
             </button>
-            <img src="${this.picture}" class="photographer-page__header__photo" alt="${this._name}">
+            <img src="${this.picture}" class="photographer-page__header__photo" alt="Photographie de profil de ${this._name}">
         </div> 
         `
     }
